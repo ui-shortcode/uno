@@ -1,0 +1,409 @@
+@use 'sass:math';
+@use 'sass:string';
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+
+// heading
+$headings : (
+    'h1' : (
+        'font-size' : 40px,
+        'line-height': 48px,
+        'font-weight': 600
+    ),
+    'h2' : (
+        'font-size' : 32px,
+        'line-height': 38px,
+        'font-weight': 600
+    ),
+    'h3' : (
+        'font-size' : 28px,
+        'line-height': 34px,
+        'font-weight': 500
+    ),
+    'h4' : (
+        'font-size' : 24px,
+        'line-height': 30px,
+        'font-weight': 500
+    ),
+    'h5' : (
+        'font-size' : 20px,
+        'line-height': 24px,
+        'font-weight': 500
+    )
+) !default;
+
+// $h1-font-size: 40px;
+// $h1-line-height: 48px;
+// $h1-font-weight: 600;
+
+// $h2-font-size: 32px;
+// $h2-line-height: 38px;
+// $h2-font-weight: 600;
+
+// $h3-font-size: 28px;
+// $h3-line-height: 34px;
+// $h3-font-weight: 500;
+
+// $h4-font-size: 24px;
+// $h4-line-height: 30px;
+// $h4-font-weight: 500;
+
+// $h5-font-size: 20px;
+// $h5-line-height: 24px;
+// $h5-font-weight: 500;
+
+// texts
+$texts : (
+    '18' : (
+        'font-size': 18px,
+        'line-height': 28px
+    ),
+    '17' : (
+        'font-size': 17px,
+        'line-height': 26px
+    ),
+    '16' : (
+        'font-size': 16px,
+        'line-height': 24px
+    ),
+    '15' : (
+        'font-size': 15px,
+        'line-height': 22px
+    ),
+    '14' : (
+        'font-size': 14px,
+        'line-height': 20px
+    ),
+    '13' : (
+        'font-size': 13px,
+        'line-height': 18px
+    ),
+    '12' : (
+        'font-size': 12px,
+        'line-height': 16px
+    ),
+) !default;
+
+// $text-18-font-size: 18px;
+// $text-18-line-height: 28px;
+
+// $text-17-font-size: 17px;
+// $text-17-line-height: 26px;
+
+// $text-16-font-size: 16px;
+// $text-16-line-height: 24px;
+
+// $text-15-font-size: 15px;
+// $text-15-line-height: 22px;
+
+// $text-14-font-size: 14px;
+// $text-14-line-height: 20px;
+
+// $text-13-font-size: 13px;
+// $text-13-line-height: 18px;
+
+// $text-12-font-size: 12px;
+// $text-12-line-height: 16px;
+
+// colors
+$colors: (
+    'gray' : (
+        '100': #F8F9FA,
+        '200': #E9ECEF,
+        '300': #DEE2E6,
+        '400': #CED4DA,
+        '500': #ABB5BE,
+        '600': #6C757D,
+        '700': #495057,
+        '800': #343A40,
+        '900': #1E2226
+    ),
+    'blue' : (
+        '100': #ECF3FF,
+        '200': #CFE2FF,
+        '300': #9EC5FE,
+        '400': #6EA8FE,
+        '500': #3D8BFD,
+        '600': #0D6EFD,
+        '700': #0A58CA,
+        '800': #084298,
+        '900': #052C65
+    ),
+    'indigo' : (
+        '100': #F4EEFE,
+        '200': #E0CFFC,
+        '300': #C29FFA,
+        '400': #A370F7,
+        '500': #8540F5,
+        '600': #6610F2,
+        '700': #520DC2,
+        '800': #3D0A91,
+        '900': #290661
+    ),
+    'purple' : (
+        '100': #F3F0FA,
+        '200': #E2D9F3,
+        '300': #C5B3E6,
+        '400': #A98EDA,
+        '500': #8C68CD,
+        '600': #6F42C1,
+        '700': #59359A,
+        '800': #432874,
+        '900': #2C1A4D
+    ),
+    'red' : (
+        '100': #FDF1F2,
+        '200': #F8D7DA,
+        '300': #F1AEB5,
+        '400': #EA868F,
+        '500': #E35D6A,
+        '600': #DC3545,
+        '700': #B02A37,
+        '800': #842029,
+        '900': #58151C
+    ),
+    'pink' : (
+        '100': #FCEFF5,
+        '200': #F7D6E6,
+        '300': #EFADCE,
+        '400': #E685B5,
+        '500': #DE5C9D,
+        '600': #D63384,
+        '700': #AB296A,
+        '800': #801F4F,
+        '900': #561435
+    ),
+    'orange' : (
+        '100': #FFF6EF,
+        '200': #FFE5D0,
+        '300': #FECBA1,
+        '400': #FEB272,
+        '500': #FD9843,
+        '600': #FD7E14,
+        '700': #CA6510,
+        '800': #984C0C,
+        '900': #653208
+    ),
+    'yellow' : (
+        '100': #FFFBEE,
+        '200': #FFF3CD,
+        '300': #FFE69C,
+        '400': #FFDA6A,
+        '500': #FFCD39,
+        '600': #FFC107,
+        '700': #CC9A06,
+        '800': #997404,
+        '900': #664D03
+    ),
+    'green' : (
+        '100': #EFFBF8,
+        '200': #D2F4EA,
+        '300': #A6E9D5,
+        '400': #79DFC1,
+        '500': #4DD4AC,
+        '600': #20C997,
+        '700': #1AA179,
+        '800': #13795B,
+        '900': #0D503C
+    ),
+    'teal' : (
+        '100': #E3FAFA,
+        '200': #BAF2F2,
+        '300': #81E0E0,
+        '400': #03C0C1,
+        '500': #009C9D,
+        '600': #009192,
+        '700': #007475,
+        '800': #015F60,
+        '900': #024E4F
+    ),
+    'cyan' : (
+        '100': #EEFBFE,
+        '200': #CFF4FC,
+        '300': #9EEAF9,
+        '400': #6EDFF6,
+        '500': #3DD5F3,
+        '600': #2CC5E3,
+        '700': #0AA2C0,
+        '800': #087990,
+        '900': #055160
+    ),
+
+    'primary' : (
+        'default': #495057,
+        'dark': #0848A8,
+        'light': #ECF3FF
+    ),
+
+    'secondary' : (
+        'default': #6C757D,
+        'dark': #495560,
+        'light': #ABB5BE
+    ),
+
+    'success' : (
+        'default': #20C997
+    ),
+
+    'danger' : (
+        'default': #DC3545
+    ),
+
+    'warning' : (
+        'default': #FFCD39
+    ),
+
+    'info' : (
+        'default': #009C9D
+    ),
+
+    'focus' : (
+        'default': #A370F7
+    )
+) !default;
+
+// colors
+// $gray-100: #F8F9FA;
+// $gray-200: #E9ECEF;
+// $gray-300: #DEE2E6;
+// $gray-400: #CED4DA;
+// $gray-500: #ABB5BE;
+// $gray-600: #6C757D;
+// $gray-700: #495057;
+// $gray-800: #343A40;
+// $gray-900: #1E2226;
+
+// $blue-100: #ECF3FF;
+// $blue-200: #CFE2FF;
+// $blue-300: #9EC5FE;
+// $blue-400: #6EA8FE;
+// $blue-500: #3D8BFD;
+// $blue-600: #0D6EFD;
+// $blue-700: #0A58CA;
+// $blue-800: #084298;
+// $blue-900: #052C65;
+
+// $indigo-100: #F4EEFE;
+// $indigo-200: #E0CFFC;
+// $indigo-300: #C29FFA;
+// $indigo-400: #A370F7;
+// $indigo-500: #8540F5;
+// $indigo-600: #6610F2;
+// $indigo-700: #520DC2;
+// $indigo-800: #3D0A91;
+// $indigo-900: #290661;
+
+// $purple-100: #F3F0FA;
+// $purple-200: #E2D9F3;
+// $purple-300: #C5B3E6;
+// $purple-400: #A98EDA;
+// $purple-500: #8C68CD;
+// $purple-600: #6F42C1;
+// $purple-700: #59359A;
+// $purple-800: #432874;
+// $purple-900: #2C1A4D;
+
+// $red-100: #FDF1F2;
+// $red-200: #F8D7DA;
+// $red-300: #F1AEB5;
+// $red-400: #EA868F;
+// $red-500: #E35D6A;
+// $red-600: #DC3545;
+// $red-700: #B02A37;
+// $red-800: #842029;
+// $red-900: #58151C;
+
+// $pink-100: #FCEFF5;
+// $pink-200: #F7D6E6;
+// $pink-300: #EFADCE;
+// $pink-400: #E685B5;
+// $pink-500: #DE5C9D;
+// $pink-600: #D63384;
+// $pink-700: #AB296A;
+// $pink-800: #801F4F;
+// $pink-900: #561435;
+
+// $orange-100: #FFF6EF;
+// $orange-200: #FFE5D0;
+// $orange-300: #FECBA1;
+// $orange-400: #FEB272;
+// $orange-500: #FD9843;
+// $orange-600: #FD7E14;
+// $orange-700: #CA6510;
+// $orange-800: #984C0C;
+// $orange-900: #653208;
+
+// $yellow-100: #FFFBEE;
+// $yellow-200: #FFF3CD;
+// $yellow-300: #FFE69C;
+// $yellow-400: #FFDA6A;
+// $yellow-500: #FFCD39;
+// $yellow-600: #FFC107;
+// $yellow-700: #CC9A06;
+// $yellow-800: #997404;
+// $yellow-900: #664D03;
+
+// $green-100: #EFFBF8;
+// $green-200: #D2F4EA;
+// $green-300: #A6E9D5;
+// $green-400: #79DFC1;
+// $green-500: #4DD4AC;
+// $green-600: #20C997;
+// $green-700: #1AA179;
+// $green-800: #13795B;
+// $green-900: #0D503C;
+
+// $teal-100: #E3FAFA;
+// $teal-200: #BAF2F2;
+// $teal-300: #81E0E0;
+// $teal-400: #03C0C1;
+// $teal-500: #009C9D;
+// $teal-600: #009192;
+// $teal-700: #007475;
+// $teal-800: #015F60;
+// $teal-900: #024E4F;
+
+// $cyan-100: #EEFBFE;
+// $cyan-200: #CFF4FC;
+// $cyan-300: #9EEAF9;
+// $cyan-400: #6EDFF6;
+// $cyan-500: #3DD5F3;
+// $cyan-600: #2CC5E3;
+// $cyan-700: #0AA2C0;
+// $cyan-800: #087990;
+// $cyan-900: #055160;
+
+// $primary: #495057;
+// $primary-dark: #0848A8;
+// $primary-light: #ECF3FF;
+
+// $secondary: #6C757D;
+// $secondary-dark: #495560;
+// $secondary-light: #ABB5BE;
+
+// $success: $green-600;
+// $danger: $red-600;
+// $warning: $yellow-500;
+// $info: $teal-500;
+// $focus: $indigo-400;
+// $white: #fff;
+// $white-rgb: 255, 255, 255;
+// $black: #000;
+// $black-rgb: 0, 0, 0;
+
+// box-shadow
+$boxshadow : (
+    'small': 0 1px 4px rgba(0,0,0,.1),
+    'regular': 0 4px 10px rgba(0,0,0,.12),
+    'large': 0 4px 10px rgba(0,0,0,.12)
+) !default;
+
+// $box-shadow-small: 0 1px 4px rgba(0,0,0,.1);
+// $box-shadow-regular: 0 4px 10px rgba(0,0,0,.12);
+// $box-shadow-large: 0 4px 10px rgba(0,0,0,.12);
+
+//
+
+$font-primary: ('Pretendard', system-ui, sans-serif);
+$font-weight-primary: 400;

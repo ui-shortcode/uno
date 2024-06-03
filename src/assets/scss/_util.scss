@@ -1,0 +1,69 @@
+@use 'config' as *;
+@use 'sass:math';
+@use 'sass:string';
+@use 'sass:list';
+@use 'sass:map';
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Black.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    // colors
+    @each $colorName, $colorArray in $colors {
+        @each $colorDepth, $colorValue in $colorArray {
+            @if $colorDepth == 'default' {
+                --color-#{$colorName}: #{$colorValue};
+            } @else {
+                --color-#{$colorName}-#{$colorDepth}: #{$colorValue};
+            }
+        }
+    }
+
+    // headings
+    @each $headingName, $headingArray in $headings {
+        @each $headingDepth, $headingValue in $headingArray {
+            --#{$headingName}-#{$headingDepth}: #{$headingValue};
+        }
+    }
+    
+    // text
+    @each $textName, $textArray in $texts {
+        @each $textDepth, $textValue in $textArray {
+            --text-#{$textName}-#{$textDepth}: #{$textValue};
+        }
+    }
+
+    // box-shadow 
+    @each $boxshadowType, $boxshadowValue in $boxshadow {
+        --shadow-#{$boxshadowType}: #{$boxshadowValue};
+    }
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: $font-weight-primary;
+}
