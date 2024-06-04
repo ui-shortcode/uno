@@ -36,7 +36,8 @@ button, input, textarea, select, .reset {
 }
 
 a {
-    color: var(--color-primary, hsl(250, 100%, 69%));
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
 textarea {
@@ -57,4 +58,8 @@ img, video, svg {
 
 [data-theme] {
     color: var(--color-contrast-high, hsl(240, 5%, 82%));
+}
+
+button {
+    cursor: pointer;
 }

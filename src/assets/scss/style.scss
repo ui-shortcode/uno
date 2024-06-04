@@ -1,7 +1,9 @@
 @use "./reset";
 @use "./config";
+@use "./button";
 @use "./util";
+@use "./layout";
 
 // components (윈도우 때문에 일일이 추가해줘야함 ㅠㅠ)
-@use "../../components/button/button";
-@use "../../components/badge/badge"; 
+@use "../../components/header/header";
+@use "../../components/sidenav/sidenav";

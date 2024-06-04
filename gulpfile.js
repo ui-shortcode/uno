@@ -24,10 +24,10 @@ const plumber = require('gulp-plumber');
 
 // Optimise Images
 function imageMin(cb) {
-    gulp.src("src/assets/img/*")
+    gulp.src("src/assets/img/**/*")
         .pipe(plumber())
         .pipe(imagemin())
-        .pipe(gulp.dest("dist/img"));
+        .pipe(gulp.dest("dist/assets/img"));
     cb();
 }
 
@@ -60,7 +60,7 @@ function js(cb) {
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
-        .pipe(concat("main.js"))
+        .pipe(concat("ui.js"))
         .pipe(uglify())
         .pipe(gulp.dest("dist/assets/js"));
     cb();
@@ -116,15 +116,18 @@ async function cleanDist(cb) {
 function watch_files() {
     browserSync.init({
         server: {
-            baseDir: "dist/"
+            baseDir: "dist/",
+            directory: true
         }
     });
+    
+    gulp.watch("src/assets/img/**/*", imageMin);
     gulp.watch("src/assets/fonts/**/*.woff", copyFonts);
     gulp.watch("src/assets/scss/**/*.scss", css);
     gulp.watch("src/components/**/*.scss", css);
     gulp.watch("src/assets/js/*.js", js).on("change", browserSync.reload);
     gulp.watch("src/pages/*.html", ejsTask).on("change", browserSync.reload);
-    gulp.watch("src/components/*.html", ejsTask).on("change", browserSync.reload);
+    gulp.watch("src/components/**/*.html", ejsTask).on("change", browserSync.reload);
 }
 
 // Default 'gulp' command with start local server and watch files for changes.

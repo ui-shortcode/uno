@@ -61,9 +61,55 @@
     @each $boxshadowType, $boxshadowValue in $boxshadow {
         --shadow-#{$boxshadowType}: #{$boxshadowValue};
     }
+
+    // header-height
+    --header-height: 65px;
+    
+    // sidebar
+    --sidenav-width: 180px;
+}
+
+html {
+    height: 100%;
+    body,
+    #wrap {    
+        height: inherit;
+        min-height: inherit;
+    }
 }
 
 body {
     font-family: $font-primary;
     font-weight: $font-weight-primary;
+    background-color: var(--color-gray-100);
+}
+
+h1, .h1 {
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    font-weight: var(--h1-font-weight);
+}
+
+h2, .h2 {
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    font-weight: var(--h2-font-weight);
+}
+
+h3, .h3 {
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--h3-font-weight);
+}
+
+h4, .h4 {
+    font-size: var(--h4-font-size);
+    line-height: var(--h4-line-height);
+    font-weight: var(--h4-font-weight);
+}
+
+h5, .h5 {
+    font-size: var(--h5-font-size);
+    line-height: var(--h5-line-height);
+    font-weight: var(--h5-font-weight);
 }

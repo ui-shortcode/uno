@@ -231,7 +231,7 @@ $colors: (
     ),
 
     'primary' : (
-        'default': #495057,
+        'default': #0C59CA,
         'dark': #0848A8,
         'light': #ECF3FF
     ),
@@ -260,6 +260,12 @@ $colors: (
 
     'focus' : (
         'default': #A370F7
+    ),
+    'white' : (
+        'default': #fff
+    ),
+    'black' : (
+        'default': #000
     )
 ) !default;
 

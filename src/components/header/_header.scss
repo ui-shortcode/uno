@@ -1,0 +1,80 @@
+@use "../../assets/scss/config" as *;
+
+header#header {
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-small);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: var(--header-height);
+        padding: 0 30px;
+
+        .header-nav {
+            height: 100%;
+            & > ul {
+                height: inherit;
+                & > li {
+                    position: relative;
+                    display: inline-flex;
+                    height: inherit;
+
+                    & > a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        font-size: var(--text-17-font-size);
+                        font-weight: 600;
+                        line-height: var(--text-17-line-height);
+                        letter-spacing: -.2px;
+                        color: var(--color-gray-800);
+                        padding: 0 16px;
+                    }
+
+                    &:hover, &:active, &:focus, &.is-active {
+                        & > ul {
+                            display: block;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: var(--header-height);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        min-width: 170px;
+                        border-top: 2px solid var(--color-primary);
+                        padding: 8px 0;
+                        background-color: var(--color-white);
+                        border-bottom-left-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                        box-shadow: var(--shadow-regular);
+
+                        li {
+                            a {
+                                display: block;
+                                padding: 8px 0;
+                                text-align: center;
+                                color: var(--color-gray-800);
+                                font-size: var(--text-15-font-size);
+                                font-weight: 500;
+                                line-height: var(--text-15-line-height);
+                                letter-spacing: -.2px;
+
+                                &:hover {
+                                    color: var(--color-primary);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

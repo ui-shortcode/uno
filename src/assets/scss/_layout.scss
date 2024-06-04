@@ -1,0 +1,12 @@
+@use "./config" as *;
+
+#content-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: calc(100% - var(--header-height));
+
+    #content {
+        width: calc(100% - var(--sidenav-width));
+    }
+} 
