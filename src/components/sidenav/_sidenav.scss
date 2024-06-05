@@ -9,6 +9,9 @@ aside#sidenav {
     --sidenav-hover-bg-color: var(--color-white);
     --sidenav-depth-bg-color: var(--color-gray-200);
     --sidenav-depth-dot-bg-color: var(--color-gray-800);
+    --sidenav-depth-hover-bg-color: var(--color-white);
+    --sidenav-depth-hover-dot-bg--color: var(--color-primary);
+    --sidenav-depth-hover-color: var(--color-primary);
 }
 
 // dark-mode
@@ -21,6 +24,9 @@ aside#sidenav {
         --sidenav-hover-bg-color: var(--color-primary-dark);
         --sidenav-depth-bg-color: var(--color-secondary-dark);
         --sidenav-depth-dot-bg-color: var(--color-white);
+        --sidenav-depth-hover-bg-color: var(--color-gray-800);
+        --sidenav-depth-hover-dot-bg--color: var(--color-white);
+        --sidenav-depth-hover-color: var(--color-white);
     }
 }
 
@@ -31,6 +37,7 @@ aside#sidenav {
     max-width: var(--sidenav-width);
     background-color: var(--sidenav-bg-color);
     border-right: 1px solid var(--sidenav-border-right-color);
+    padding-top: 8px;
 
     .depth-nav {
         display: none;
@@ -60,11 +67,11 @@ aside#sidenav {
                 }
 
                 &:hover, &:active, &.is-active {
-                    // background-color: var(--color-white);
-                    // color: var(--color-primary);
-                    // &::before {
-                    //     background-color: var(--color-primary);
-                    // }
+                    background-color: var(--sidenav-depth-hover-bg-color);
+                    color: var(--sidenav-depth-hover-color);
+                    &::before {
+                        background-color: var(--sidenav-depth-hover-dot-bg--color);
+                    }
                 }
             }
         }

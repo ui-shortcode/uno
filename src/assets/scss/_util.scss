@@ -79,6 +79,7 @@ html {
 }
 
 body {
+    min-width: 1200px;
     font-family: $font-primary;
     font-weight: $font-weight-primary;
     background-color: var(--color-gray-100);

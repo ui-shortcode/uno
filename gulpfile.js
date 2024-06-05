@@ -33,9 +33,9 @@ function imageMin(cb) {
 
 // Copy all HTML files to Dist
 function copyHTML(cb) {
-    gulp.src("src/*.html")
+    gulp.src("src/pages/*.html")
         .pipe(plumber())
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("dist/html"));
     cb();
 }
 
@@ -94,7 +94,7 @@ function ejsTask(cb) {
     gulp.src("src/pages/*.html")
         .pipe(plumber())
         .pipe(ejs())
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("dist/html"));
     cb();
 }
 
