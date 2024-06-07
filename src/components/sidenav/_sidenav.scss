@@ -6,8 +6,8 @@ aside#sidenav {
     --sidenav-border-right-color: var(--color-gray-300);
     --sidenav-link-color: var(--color-gray-800);
     --sidenav-hover-color: var(--color-primary);
-    --sidenav-hover-bg-color: var(--color-white);
-    --sidenav-depth-bg-color: var(--color-gray-200);
+    --sidenav-hover-bg-color: var(--color-gray-100);
+    --sidenav-depth-bg-color: var(--color-gray-100);
     --sidenav-depth-dot-bg-color: var(--color-gray-800);
     --sidenav-depth-hover-bg-color: var(--color-white);
     --sidenav-depth-hover-dot-bg--color: var(--color-primary);
@@ -57,7 +57,7 @@ aside#sidenav {
                 align-items: center;
                 color: var(--sidenav-link-color);
                 font-size: var(--text-14-font-size);
-                font-weight: 400;
+                font-weight: 500;
                 line-height: var(--text-14-line-height);
                 background-color: var(--sidenav-depth-bg-color);
                 padding-left: 25px;
