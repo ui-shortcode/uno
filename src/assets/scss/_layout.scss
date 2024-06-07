@@ -4,9 +4,61 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: calc(100% - var(--header-height));
+    // height: calc(100% - var(--header-height));
+    height: 100%;
 
     #content {
-        width: calc(100% - var(--sidenav-width));
+        width: 100%;
+        padding: calc(var(--header-height) + 10px) 30px 30px calc(var(--sidenav-width) + 30px);
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+
+            .page-title {
+                display: flex;
+                height: 49px;
+                align-items: center;
+
+                h1 {
+                    display: inline-flex;
+                    align-items: center;    
+                    font-size: var(--h5-font-size);
+                    font-weight: var(--h5-font-weight);
+                    line-height: var(--h5-line-height);
+
+                    & + span {
+                        margin-left: 12px;
+                        color: var(--color-gray-900);
+                        font-size: var(--text-14-font-size);
+                        line-height: var(--text-14-line-height);
+                    }
+                }
+            }
+
+            .page-breadcrumb {
+                span {
+                    display: inline-flex;
+                    font-size: var(--text-12-font-size);
+                    line-height: var(--text-12-line-height);
+                    padding: 0 8px;
+
+                    &.gap {
+                        padding: 0;
+                        color: var(--color-gray-400);
+                    }
+
+                    &.current {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+
+        .page-content {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-200);
+            height: 1000px;
+        }
     }
 } 

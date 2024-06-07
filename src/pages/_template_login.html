@@ -1,0 +1,38 @@
+<%- include("../components/00_head/_head.html") %>
+
+    <div class="container">
+        <%- include("../components/header/_header.html", { logined: false }) %>
+
+        <main id="content-wrap">
+            <%- include("../components/sidenav/_sidenav.html") %>
+
+            <div id="content">
+                <!-- .page-header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>API 목록</h1>
+                        <span>등록한 API 목록 이용 현황, 약관, 규격 그룹 등을 관리하세요.</span>
+                    </div>
+
+                    <div class="page-breadcrumb">
+                        <span>Admin</span>
+                        <span class="gap">/</span>
+                        <span>API</span>
+                        <span class="gap">/</span>
+                        <span class="current">API 목록</span>
+                    </div>
+                </div>
+                <!-- // .page-header -->
+
+                <!-- .page-content -->
+                <div class="page-content">
+                    page-content
+                </div>
+                <!-- // .page-content -->
+            </div>
+        </main>
+    </div>
+    
+    <%- include("../components/footer/_footer.html", {}) %>
+    
+<%- include("../components/10_foot/_foot.html") %>

@@ -93,7 +93,7 @@ function css(cb) {
 function ejsTask(cb) {
     gulp.src("src/pages/*.html")
         .pipe(plumber())
-        .pipe(ejs())
+        .pipe(ejs({}, {}, { async: true }))
         .pipe(gulp.dest("dist/html"));
     cb();
 }

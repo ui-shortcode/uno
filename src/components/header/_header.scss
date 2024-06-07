@@ -1,7 +1,10 @@
 @use "../../assets/scss/config" as *;
 
 header#header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
     background-color: var(--color-white);
     box-shadow: var(--shadow-small);
@@ -80,6 +83,40 @@ header#header {
         .header-util {
             .btn {
                 margin: 0 2px;
+            }
+        }
+
+        .header-logined {
+            display: flex;
+            align-items: center;
+
+            span {
+                position: relative;
+                display: inline-flex;
+                height: 20px;
+                align-items: center;
+                padding: 0 10px;
+                color: var(--color-gray-600);
+                font-size: var(--text-13-font-size);
+                font-weight: 500;
+                line-height: var(--text-13-line-height);
+
+                &.datetime::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 1px;
+                    height: 12px;
+                    transform: translateY(-50%);
+                    background: var(--color-gray-400);
+                }
+
+                &.username {
+                    padding-right: 25px;
+                    margin-right: 13px;
+                    background: url("../img/header/logined-icon.svg") 100% 50% no-repeat;
+                }
             }
         }
     }

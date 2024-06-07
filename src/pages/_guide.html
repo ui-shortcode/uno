@@ -9,6 +9,18 @@
 
 <div class="guide">
     <div class="guide-box">
+        <h4>Popup Template</h4>
+        <%- include('../components/popup/_popup.html', {
+            popup_id : 'popup-test-id',
+            popup_title : 'popup test',
+            popup_content : 'popup-content',
+            popup_type : 'confirm'
+        }) %>
+    </div>
+
+    <div class="gap"></div>
+
+    <div class="guide-box">
         <h4>primary</h4>
         <a href="#" class="btn"><span>텍스트</span></a>
         <a href="#" class="btn outline"><span>텍스트</span></a>
