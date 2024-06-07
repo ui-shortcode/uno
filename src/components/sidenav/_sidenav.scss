@@ -31,9 +31,6 @@ aside#sidenav {
 }
 
 aside#sidenav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: var(--sidenav-width);
     max-width: var(--sidenav-width);
     min-height: 100%;
@@ -41,7 +38,7 @@ aside#sidenav {
     overflow-y: auto;
     background-color: var(--sidenav-bg-color);
     border-right: 1px solid var(--sidenav-border-right-color);
-    padding-top: calc( var(--header-height) + 8px);
+    padding-top: 8px;
 
     .depth-nav {
         display: none;
