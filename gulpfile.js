@@ -13,6 +13,7 @@ const babel = require('gulp-babel');
 const ejs = require('gulp-ejs');
 const del = require('del');
 const plumber = require('gulp-plumber');
+const prettify = require('gulp-prettify');
 
 // /*
 // TOP LEVEL FUNCTIONS
@@ -94,6 +95,7 @@ function ejsTask(cb) {
     gulp.src("src/pages/*.html")
         .pipe(plumber())
         .pipe(ejs({}, {}, { async: true }))
+        .pipe(prettify({ indent_size: 4, unformatted: ['pre', 'code'] }))
         .pipe(gulp.dest("dist/html"));
     cb();
 }

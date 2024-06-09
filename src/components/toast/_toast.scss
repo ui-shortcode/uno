@@ -1,0 +1,52 @@
+@use "../../assets/scss/config" as *;
+
+.toast-message-wrapper {
+    --toast-color: var(--color-cyan-900);
+    --toast-border-color: var(--color-cyan-500);
+    --toast-bg-color: var(--color-cyan-200);
+
+    position: relative;
+    display: inline-flex;
+    width: 380px;
+    padding: 15px 15px 15px 43px;
+    color: var(--toast-color);
+    background-color: var(--toast-bg-color);
+    border: 1px solid var(--toast-border-color);
+    border-radius: 6px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--toast-color);
+        mask-image: url('../img/icon/svg/alarm.svg');
+    }
+
+    .toast-message {
+        padding-right: 32px;
+        font-size: var(--text-14-font-size);
+        font-weight: 500;
+        line-height: var(--text-14-line-height);
+        word-break: break-all;
+    }
+
+    .toast-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        background-color: var(--toast-color);
+        mask-image: url('../img/icon/svg/close.svg');
+    }
+
+    &.toast-error {
+        --toast-color: var(--color-red-900);
+        --toast-bg-color: var(--color-red-200);
+        --toast-border-color: var(--color-red-400);
+    }
+}

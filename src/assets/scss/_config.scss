@@ -420,3 +420,42 @@ $boxshadow : (
 
 $font-primary: ('Pretendard', system-ui, sans-serif);
 $font-weight-primary: 400;
+
+// mixins
+
+// accessibility → hide
+@mixin srHide {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+// accessibility → show
+@mixin srShow {
+    position: static;
+    clip: auto;
+    clip-path: none;
+}
+
+// edit font rendering
+@mixin fontSmooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// triangle
+@mixin triangle ($direction: up, $width: 12px, $color: red) {
+    width: 0;
+    height: 0;
+    border: $width solid transparent;
+
+    @if( $direction == left ) {
+        border-right-color: $color;
+    } @else if( $direction == right ) {
+        border-left-color: $color;
+    } @else if( $direction == down ) {
+        border-top-color: $color;
+    } @else {
+        border-bottom-color: $color;
+    }
+}

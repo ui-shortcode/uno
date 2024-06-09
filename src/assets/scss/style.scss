@@ -1,6 +1,6 @@
 @use "./reset";
 @use "./config";
-@use "./button";
+@use "./icon";
 @use "./util";
 @use "./layout";
 
@@ -8,4 +8,7 @@
 @use "../../components/header/header";
 @use "../../components/footer/footer";
 @use "../../components/sidenav/sidenav";
+@use "../../components/button/button";
+@use "../../components/badge/badge";
+@use "../../components/toast/toast";
 @use "../../components/popup/popup";

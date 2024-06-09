@@ -1,0 +1,40 @@
+<% const buttonType = locals.buttonType ? locals.buttonType : 'link' %>
+<% const buttonText = locals.buttonText ? locals.buttonText : 'Buttons' %>
+<% const buttonColor = locals.buttonColor ? locals.buttonColor : 'btn-primary' %>
+<% const buttonSize = locals.buttonSize ? locals.buttonSize : 'btn-medium' %>
+<% const buttonIcon = locals.buttonIcon ? locals.buttonIcon : '' %>
+<% const buttonIconRight = locals.buttonIconRight ? locals.buttonIconRight : false %>
+<% const buttonMore = locals.buttonMore ? locals.buttonMore : false %>
+<% const buttonOutlined = locals.buttonOutlined ? locals.buttonOutlined : false %>
+<% const buttonRound = locals.buttonRound ? locals.buttonRound : false %>
+
+<% 
+    var btnClasses = 'btn';
+    btnClasses += ' ' + buttonSize + ' ' + buttonColor;
+    if(buttonOutlined) btnClasses += ' btn-outlined';
+    if(buttonRound) btnClasses += ' btn-round';
+    if(buttonIconRight) btnClasses += ' btn-icon-right';
+
+    if(buttonMore) btnClasses = 'btn-dot-more';
+%>
+
+<% if (buttonType == 'link') { %>
+<a href="#"
+<% } else { %>
+<button type="button"
+<% } %>
+
+class="<%= btnClasses %>">
+
+<% if(buttonMore) { %>
+    <span class="text sr-hide">더보기</span>
+<% } else { %>
+    <% if(buttonIcon != '') {%><i class="<%= buttonIcon %>"></i><%}%>
+    <span class="text"><%= buttonText %></span>
+<% } %>
+
+<% if (buttonType == 'link') { %>
+</a>
+<% } else { %>
+</button>
+<% } %>

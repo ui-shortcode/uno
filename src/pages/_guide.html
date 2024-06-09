@@ -1,86 +1,797 @@
-<%- include("../components/00_head/_head.html") %>
+<%- include("../components/00_head/_head.html", { document_title: 'Guide' }) %>
 
 <style>
     .guide { width: 1200px; margin: 0 auto;}
-    .guide .gap { margin: 20px 0; height: 1px solid #ccc;}
-    .guide .guide-box { margin: 5px 0; }
-    .guide .guide-box h4 { text-transform: uppercase; letter-spacing: -0.4px; font-weight: 800; }
+    .guide .gap { display:block; margin: 20px 0; height: 1px; background-color: #ccc; }
+    .guide .guide-box { margin: 20px 0; }
+    .guide .guide-box h4 { text-transform: uppercase; letter-spacing: -0.4px; font-weight: 800; margin-bottom: 10px; }
+    .guide .guide-inner-box { display:flex; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap; background-color: #fff; padding: 20px 20px 10px; border: 1px solid #ccc; }
+    .guide .guide-inner-box ul { display: flex; flex-wrap: wrap; }
+    .guide .guide-inner-box ul li { display: inline-flex; width: 33.333%; padding: 10px; }
+    .guide .guide-inner-box > .badge,
+    .guide .guide-inner-box > .btn,
+    .guide .guide-inner-box > .btn-dot-more {margin: 4px;}
+    .guide .guide-inner-box + .guide-inner-box { margin-top: 20px;}
 </style>
 
 <div class="guide">
+
     <div class="guide-box">
-        <h4>Popup Template</h4>
-        <%- include('../components/popup/_popup.html', {
-            popup_id : 'popup-test-id',
-            popup_title : 'popup test',
-            popup_content : 'popup-content',
-            popup_type : 'confirm'
-        }) %>
+        <h4>Badge</h4>
+
+        <div class="guide-inner-box">
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-primary'
+            }) %>
+
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-secondary',
+                badgeColor: 'badge-secondary'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-success',
+                badgeColor: 'badge-success'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-danger',
+                badgeColor: 'badge-danger'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-warning',
+                badgeColor: 'badge-warning'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-info',
+                badgeColor: 'badge-info'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-focus',
+                badgeColor: 'badge-focus'
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-primary.badge-large',
+                badgeSize: 'badge-large'
+            }) %>
+
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-secondary.badge-large',
+                badgeColor: 'badge-secondary',
+                badgeSize: 'badge-large'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-success.badge-large',
+                badgeColor: 'badge-success',
+                badgeSize: 'badge-large'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-danger.badge-large',
+                badgeColor: 'badge-danger',
+                badgeSize: 'badge-large'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-warning.badge-large',
+                badgeColor: 'badge-warning',
+                badgeSize: 'badge-large'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-info.badge-large',
+                badgeColor: 'badge-info',
+                badgeSize: 'badge-large'
+            }) %>
+            
+            <%- include("../components/badge/_badge.html", {
+                badgeText: '.badge-focus.badge-large',
+                badgeColor: 'badge-focus',
+                badgeSize: 'badge-large'
+            }) %>
+        </div>
     </div>
 
     <div class="gap"></div>
 
     <div class="guide-box">
-        <h4>primary</h4>
-        <a href="#" class="btn"><span>텍스트</span></a>
-        <a href="#" class="btn outline"><span>텍스트</span></a>
-        <a href="#" class="btn size-small"><span>텍스트</span></a>
-        <a href="#" class="btn size-small outline"><span>텍스트</span></a>
+        <h4>Toast</h4>
+        <div class="guide-inner-box">
+            <%- include("../components/toast/_toast.html", {
+                toastMessage : '정확한 파일명이 아닙니다. 가나다라마바사아자차카타파하. WWWWWWWWWWWWWWWWWWWWWWWWW'
+            }) %>
+
+            
+            <%- include("../components/toast/_toast.html", {
+                toastMessage : '파일을 읽는 중 오류가 발생했습니다. 가나다라마바사아자차카타파하. WWWWWWWWWWWWWWWWWWWWWWWWW',
+                toastType: 'toast-error'
+            }) %>
+        </div>
     </div>
 
     <div class="gap"></div>
 
     <div class="guide-box">
-        <h4>success</h4>
-        <a href="#" class="btn btn-success"><span>텍스트</span></a>
-        <a href="#" class="btn btn-success outline"><span>텍스트</span></a>
-        <a href="#" class="btn btn-success size-small"><span>텍스트</span></a>
-        <a href="#" class="btn btn-success size-small outline"><span>텍스트</span></a>
+        <h4>Button</h4>
+
+        <div class="guide-inner-box">
+            <%- include("../components/button/_button.html", {
+                buttonMore: true
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonSize: 'btn-small'
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-small'
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonSize: 'btn-small',
+                buttonOutlined: true,
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-small',
+                buttonOutlined: true,
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonSize: 'btn-small'
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonSize: 'btn-small'
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-small',
+                buttonIconRight: true,
+                buttonIcon: 'minus'
+            }) %>
+
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-small',
+                buttonOutlined: true,
+                buttonIconRight: true,
+                buttonIcon: 'plus'
+            }) %>
+        </div>
+
+        <div class="guide-inner-box">    
+            <%- include("../components/button/_button.html", {
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonSize: 'btn-small'
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonSize: 'btn-small'
+            }) %>
+
+            <div></div>
+            
+            <%- include("../components/button/_button.html", {
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-small'
+            }) %>
+
+        </div>
+        <div class="guide-inner-box">
+
+            <%- include("../components/button/_button.html", {}) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus'
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/button/_button.html", {
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonIcon: 'excel'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonIcon: 'download'
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonIcon: 'excel'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonIcon: 'download'
+            }) %>
+
+            <div></div>
+            
+            <%- include("../components/button/_button.html", {
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonRound: true
+            }) %>
+
+            <div></div>
+            
+            <%- include("../components/button/_button.html", {
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonRound: true,
+                buttonIcon: 'excel'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonRound: true
+            }) %>
+
+            <div></div>
+
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'excel'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonIcon: 'download'
+            }) %>
+        </div>
+        <div class="guide-inner-box">
+            
+            <%- include("../components/button/_button.html", {
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonSize: 'btn-large'
+            }) %>
+        
+            <div></div>
+            
+            <%- include("../components/button/_button.html", {
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonSize: 'btn-large',
+                buttonIcon: 'excel'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+        
+            <div></div>
+        
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonSize: 'btn-large'
+            }) %>
+        
+            <div></div>
+        
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'excel'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonSize: 'btn-large',
+                buttonIcon: 'download'
+            }) %>
+        
+            <div></div>
+            
+            <%- include("../components/button/_button.html", {
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+        
+            <div></div>
+        
+            <%- include("../components/button/_button.html", {
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-secondary',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-success',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-danger',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-warning',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-info',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+            <%- include("../components/button/_button.html", {
+                buttonColor: 'btn-focus',
+                buttonOutlined: true,
+                buttonRound: true,
+                buttonSize: 'btn-large'
+            }) %>
+        
+        </div>
     </div>
 
     <div class="gap"></div>
-
     
-    <div class="guide-box">
-        <h4>danger</h4>
-        <a href="#" class="btn btn-danger"><span>텍스트</span></a>
-        <a href="#" class="btn btn-danger outline"><span>텍스트</span></a>
-        <a href="#" class="btn btn-danger size-small"><span>텍스트</span></a>
-        <a href="#" class="btn btn-danger size-small outline"><span>텍스트</span></a>
-    </div>
-
-    <div class="gap"></div>
-
-    
-    <div class="guide-box">
-        <h4>warning</h4>
-        <a href="#" class="btn btn-warning"><span>텍스트</span></a>
-        <a href="#" class="btn btn-warning outline"><span>텍스트</span></a>
-        <a href="#" class="btn btn-warning size-small"><span>텍스트</span></a>
-        <a href="#" class="btn btn-warning size-small outline"><span>텍스트</span></a>
-    </div>
-
-    <div class="gap"></div>
-
-    
-    <div class="guide-box">
-        <h4>focus</h4>
-        <a href="#" class="btn btn-focus"><span>텍스트</span></a>
-        <a href="#" class="btn btn-focus outline"><span>텍스트</span></a>
-        <a href="#" class="btn btn-focus size-small"><span>텍스트</span></a>
-        <a href="#" class="btn btn-focus size-small outline"><span>텍스트</span></a>
-    </div>
-
-    <div class="gap"></div>
-
-    
-    <div class="guide-box">
-        <h4>secondary</h4>
-        <a href="#" class="btn btn-secondary"><span>텍스트</span></a>
-        <a href="#" class="btn btn-secondary outline"><span>텍스트</span></a>
-        <a href="#" class="btn btn-secondary size-small"><span>텍스트</span></a>
-        <a href="#" class="btn btn-secondary size-small outline"><span>텍스트</span></a>
-    </div>
 </div>
 
 <%- include("../components/10_foot/_foot.html") %>

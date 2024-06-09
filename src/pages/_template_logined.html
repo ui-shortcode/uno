@@ -1,7 +1,7 @@
-<%- include("../components/00_head/_head.html") %>
+<%- include("../components/00_head/_head.html", { document_title: 'Template Logined' }) %>
 
     <div class="container">
-        <%- include("../components/header/_header.html", { logined: false }) %>
+        <%- include("../components/header/_header.html", { logined: true }) %>
 
         <main id="content-wrap">
             <%- include("../components/sidenav/_sidenav.html") %>

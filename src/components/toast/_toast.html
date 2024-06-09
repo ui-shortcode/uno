@@ -1,0 +1,9 @@
+<% const toastType = locals.toastType ? locals.toastType : 'toast-notify' %>
+<% const toastMessage = locals.toastMessage ? locals.toastMessage : '정확한 파일명이 아닙니다.' %>
+
+<div class="toast-message-wrapper <%= toastType %>">
+    <div class="toast-message">
+        <span><%= toastMessage %></span>
+    </div>
+    <button type="button" class="toast-close"><span class="sr-hide">닫기</span></button>
+</div>

@@ -96,6 +96,9 @@ body {
     font-family: $font-primary;
     font-weight: $font-weight-primary;
     background-color: var(--color-gray-100);
+    letter-spacing: -.2px;
+
+    @include fontSmooth;
 }
 
 h1, .h1 {
@@ -126,4 +129,12 @@ h5, .h5 {
     font-size: var(--h5-font-size);
     line-height: var(--h5-line-height);
     font-weight: var(--h5-font-weight);
+}
+
+.sr-hide {
+    @include srHide;
+}
+
+.sr-show {
+    @include srShow;
 }

@@ -1,0 +1,24 @@
+@use "./config" as *;
+
+i {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    &.download {
+        mask-image: url('../img/icon/svg/download.svg');
+    }
+
+    &.excel {
+        mask-image: url('../img/icon/svg/excel.svg');
+    }
+
+    &.minus {
+        mask-image: url('../img/icon/svg/minus.svg');
+    }
+
+    &.plus {
+        width: 15px !important;
+        height: 15px !important;
+        mask-image: url('../img/icon/svg/plus.svg');
+    }
+}
