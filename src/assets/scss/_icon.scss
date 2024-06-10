@@ -21,4 +21,8 @@ i {
         height: 15px !important;
         mask-image: url('../img/icon/svg/plus.svg');
     }
+
+    &.user {
+        mask-image: url('../img/icon/svg/user.svg');
+    }
 }

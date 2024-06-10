@@ -459,3 +459,11 @@ $font-weight-primary: 400;
         border-bottom-color: $color;
     }
 }
+
+// placeholder mixin
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
