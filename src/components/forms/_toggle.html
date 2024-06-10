@@ -1,0 +1,13 @@
+
+<% const toggleLabel = locals.toggleLabel ? locals.toggleLabel : '' %>
+<% const toggleChecked = locals.toggleChecked ? locals.toggleChecked : false %>
+
+<label class="toggle">
+    <input 
+        type="checkbox"
+        class="toggle-input"
+        <% if(toggleChecked) {%> checked<%}%>
+    >
+    <div class="toggle-switch"></div>
+    <span class="toggle-label <% if(toggleLabel == '') {%> sr-hide<%}%>"><%= toggleLabel %></span>
+</label>

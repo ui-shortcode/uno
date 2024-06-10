@@ -1,0 +1,26 @@
+
+<% const formControlType = locals.formControlType ? locals.formControlType : '' %>
+<% const formControlValue = locals.formControlValue ? locals.formControlValue : '' %>
+<% const formReadonly = locals.formReadonly ? locals.formReadonly : false %>
+<% const formDisabled = locals.formDisabled ? locals.formDisabled : false %>
+<% const formPlaceholder = locals.formPlaceholder ? locals.formPlaceholder : '' %>
+<% const formInvalid = locals.formInvalid ? locals.formInvalid : false %>
+<% const formMessage = locals.formMessage ? locals.formMessage : '' %>
+<% const formInputDelete = locals.formInputDelete ? locals.formInputDelete : false %>
+
+<div class="field <% if(formInputDelete) {%>with-delete<%}%>">
+    <input 
+        type="text" 
+        class="form-control
+            form-text
+            <%= formControlType %>
+            <% if(formInvalid) {%>form-error<%}%>
+        " 
+        value="<%= formControlValue %>" 
+        <% if(formReadonly) {%> readonly<%}%>
+        <% if(formDisabled) {%> disabled<%}%>
+        <% if(formPlaceholder != '') {%>placeholder="<%= formPlaceholder %>"<%}%>
+    >
+    <% if(formMessage != '') { %><span class="form-message"><%= formMessage %></span><% } %>
+    <% if(formInputDelete) { %><button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button><% } %>
+</div>

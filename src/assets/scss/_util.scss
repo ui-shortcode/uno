@@ -96,6 +96,8 @@ body {
     font-family: $font-primary;
     font-weight: $font-weight-primary;
     background-color: var(--color-gray-100);
+    font-size: var(--text-14-font-size);
+    line-height: var(--text-14-line-height);
     letter-spacing: -.2px;
 
     @include fontSmooth;

@@ -1,0 +1,16 @@
+<% const selectSize = locals.selectSize ? locals.selectSize : '' %>
+<% const selectType = locals.selectType ? locals.selectType : '' %>
+
+<% 
+    var selectClasses = 'form-select';
+    if(selectSize != '') selectClasses += ' ' + selectSize;
+    if(selectType != '') selectClasses += ' select-' + selectType;
+%>
+
+<div class="field">
+    <select class="<%= selectClasses %>">
+        <% for(var i = 0; i < 10; i++) {%>
+        <option>구분 이름 <%= i %></option>
+        <% } %>
+    </select>
+</div>

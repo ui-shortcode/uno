@@ -1,0 +1,19 @@
+
+
+<% const checkboxId = locals.checkboxId ? locals.checkboxId : 'checkbox-1-1' %>
+<% const checkboxChecked = locals.checkboxChecked ? locals.checkboxChecked : false %>
+<% const checkboxName = locals.checkboxName ? locals.checkboxName : 'checkbox-1' %>
+<% const checkboxDisabled = locals.checkboxDisabled ? locals.checkboxDisabled : false %>
+<% const checkboxCustom = locals.checkboxCustom ? locals.checkboxCustom : false %>
+<% const labelText = locals.labelText ? locals.labelText : '' %>
+
+<input 
+    type="checkbox" 
+    class="checkbox-input <%= checkboxCustom %>" 
+    id="<%= checkboxId %>"
+    <% if(checkboxChecked) {%> checked<%}%>
+    <% if(checkboxDisabled) {%> disabled<%}%>
+>
+<label class="checkbox" for="<%= checkboxId %>">
+    <span <% if(labelText == '') {%>class="sr-hide"<%}%>><%= labelText %></span>
+</label>

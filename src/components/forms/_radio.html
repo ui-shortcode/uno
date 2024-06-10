@@ -1,0 +1,20 @@
+
+
+<% const radioId = locals.radioId ? locals.radioId : 'radio-1-1' %>
+<% const radioChecked = locals.radioChecked ? locals.radioChecked : false %>
+<% const radioName = locals.radioName ? locals.radioName : 'radio-1' %>
+<% const radioDisabled = locals.radioDisabled ? locals.radioDisabled : false %>
+<% const radioCustom = locals.radioCustom ? locals.radioCustom : '' %>
+<% const labelText = locals.labelText ? locals.labelText : '' %>
+
+<input 
+    type="radio" 
+    class="radio-input <%= radioCustom %>" 
+    id="<%= radioId %>"
+    <% if(radioChecked) {%> checked<%}%>
+    <% if(radioDisabled) {%> disabled<%}%>
+>
+
+<label class="radio" for="<%= radioId %>">
+    <span <% if(labelText == '') {%>class="sr-hide"<%}%>><%= labelText %></span>
+</label>
