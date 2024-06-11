@@ -1,0 +1,22 @@
+<%- include("../components/00_head/_head.html", { document_title: '페이지 리스트' }) %>
+
+<style>
+    .index-list { width: 700px; background-color: #fff; margin: 0 auto; height: 100%; }
+    .index-list ul { list-style: disc; margin-left: 50px;}
+    .index-list ul li a:hover{ text-decoration: underline; }
+    .index-list h4 { font-weight: 800; padding: 20px 10px; } 
+</style>
+
+<div class="index-list">
+    <h4>페이지 리스트</h4>
+    <ul>
+        <li><a href="./_template_login.html">레이아웃 - 로그인 전</a></li>
+        <li><a href="./_template_logined.html">레이아웃 - 로그인 후</a></li>
+        <li><a href="./_popup-alert.html">알림 팝업 예시</a></li>
+        <li><a href="./_popup-content.html">콘텐츠 팝업 가이드</a></li>
+        <li><a href="./_form.html">폼 요소 가이드</a></li>
+        <li><a href="./_guide.html">스타일 가이드</a></li>
+    </ul>
+</div>
+
+<%- include("../components/10_foot/_foot.html") %>

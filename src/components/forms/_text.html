@@ -21,6 +21,6 @@
         <% if(formDisabled) {%> disabled<%}%>
         <% if(formPlaceholder != '') {%>placeholder="<%= formPlaceholder %>"<%}%>
     >
-    <% if(formMessage != '') { %><span class="form-message"><%= formMessage %></span><% } %>
+    <% if(formMessage != '') { %><span class="error-message"><%= formMessage %></span><% } %>
     <% if(formInputDelete) { %><button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button><% } %>
 </div>

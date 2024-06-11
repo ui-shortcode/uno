@@ -407,9 +407,9 @@ $colors: (
 
 // box-shadow
 $boxshadow : (
-    'small': 0 1px 4px rgba(0,0,0,.1),
-    'regular': 0 4px 10px rgba(0,0,0,.12),
-    'large': 0 4px 10px rgba(0,0,0,.12)
+    'sm': 0 1px 4px rgba(0,0,0,.1),
+    'md': 0 4px 10px rgba(0,0,0,.12),
+    'lg': 0 4px 10px rgba(0,0,0,.12)
 ) !default;
 
 // $box-shadow-sm: 0 1px 4px rgba(0,0,0,.1);
