@@ -1,0 +1,372 @@
+<%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
+
+<style>
+    .gap { margin: 20px 0;}
+</style>
+
+
+<!-- popup -->
+<!-- 
+    popup 사이즈
+    default: 800px;
+    .popup-size-lg : 1200px;
+    .popup-size-sm : 620px;
+-->
+<div class="popup-wrapper popup-type-content">
+    <div class="popup-header">APP 승인요청</div>
+    <div class="popup-body">
+        <div class="popup-content">         
+            
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>
+                                API명
+                                <span class="require">*</span>
+                            </th>
+                            <td>
+                                <%- include('../components/forms/_text.html', { formPlaceholder : '승인선명 입력' }) %>
+                            </td>
+                            <th>상태</th>
+                            <td>
+                                <%- include('../components/badge/_badge.html', {
+                                    badgeText: '수정 진행 중',
+                                    badgeColor: 'badge-success'
+                                }) %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>제목 <span class="require">*</span></th>
+                            <td colspan="3"><%- include('../components/forms/_text.html', { formControlValue : '1원 송금 API - 승인요청' }) %></td>
+                        </tr>
+                        <tr>
+                            <th>승인요청자 <span class="require">*</span></th>
+                            <td colspan="3"><%- include('../components/forms/_text.html', { formControlValue : '제공기관1 매니저' }) %></td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td colspan="3">
+                                <textarea class="form-control form-text" style="height: 54px;">승인 또는 반려 의견 입력</textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <!-- form-tbl-header -->
+                <div class="form-tbl-header">
+                    <span class="tbl-title">
+                        기본정보
+                    </span>
+        
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-primary"><span>승인라인 저장</span></button>
+                    </div>
+                </div>
+                <!-- // form-tbl-header -->
+        
+                <div class="form-tbl-body">
+                    <div class="approve-wrapper">
+                        <div class="approve-box approve-charger">
+                            <div class="approve-box-header">
+                                승인자 정보
+                            </div>
+                            <div class="approve-th-list">
+                                <span>데이터</span>
+                                <span>닉네임</span>
+                                <span>선택</span>
+                            </div>
+                            <div class="approve-box-body">
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1managerp1manager</div>
+                                    <div class="approve-nickname">1제공매니저1제공매니저1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                            </div>
+                        </div>
+        
+                        <div class="approve-box approve-line">
+                            <div class="approve-box-header">
+                                승인 라인
+                            </div>
+                            <div class="approve-th-list">
+                                <span>데이터</span>
+                                <span>닉네임</span>
+                                <span>선택</span>
+                            </div>
+                            <div class="approve-box-body">
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저1제공매니저1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                                 
+                                <!-- approve-list-box -->
+                                <div class="approve-list-box">
+                                    <div class="approve-data">p1manager</div>
+                                    <div class="approve-nickname">1제공매니저</div>
+                                    <div class="approve-util">
+                                        <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
+                                    </div>
+                                </div>
+                                <!-- // approve-list-box -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // form-wrapper -->         
+            
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <!-- form-tbl-header -->
+                <div class="form-tbl-header">
+                    <span class="tbl-title">
+                        기본정보
+                    </span>
+                </div>
+                <!-- // form-tbl-header -->
+
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>APP 버전</th>
+                            <td colspan="3">V2</td>
+                        </tr>
+                        <tr>
+                            <th>APP 설명</th>
+                            <td colspan="3">송금APP</td>
+                        </tr>
+                        <tr>
+                            <th>등록기관</th>
+                            <td colspan="3">/api/money/send</td>
+                        </tr>
+                        <tr>
+                            <th>패턴</th>
+                            <td colspan="3">패턴1</td>
+                        </tr>
+                        <tr>
+                            <th>APP Secret</th>
+                            <td colspan="3">
+                                <button type="button" class="btn btn-primary btn-outlined"><span>조회</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>APP Secret</th>
+                            <td>
+                                <div class="field full">
+                                    <select class="form-select">
+                                        <option>기관선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>이용약관</th>
+                            <td>
+                                <div class="view-rules">
+                                    <span>이용약관</span>
+                                    <button type="button" class="btn btn-primary btn-outlined"><span>약관보기</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>접근 IP</th>
+                            <td colspan="3">
+                                <div class="access-ip-list">
+                                    <div class="access-ip-header">
+                                        <div>출발지IP</div>
+                                        <div>목적지IP</div>
+                                    </div>
+        
+                                    <div class="access-ip-body">
+                                        <!-- access-ip-box -->
+                                        <div class="access-ip-box">
+                                            <div class="start-ip">127.0.0.1</div>
+                                            <div class="dest-ip">10.0.0.24</div>
+                                        </div>
+                                        <!-- // access-ip-box -->
+                                         
+                                        <!-- access-ip-box -->
+                                        <div class="access-ip-box">
+                                            <div class="start-ip">127.0.0.1</div>
+                                            <div class="dest-ip">10.0.0.24</div>
+                                        </div>
+                                        <!-- // access-ip-box -->
+                                         
+                                        <!-- access-ip-box -->
+                                        <div class="access-ip-box">
+                                            <div class="start-ip">127.0.0.1</div>
+                                            <div class="dest-ip">10.0.0.24</div>
+                                        </div>
+                                        <!-- // access-ip-box -->
+                                         
+                                        <!-- access-ip-box -->
+                                        <div class="access-ip-box">
+                                            <div class="start-ip">127.0.0.1</div>
+                                            <div class="dest-ip">10.0.0.24</div>
+                                        </div>
+                                        <!-- // access-ip-box -->
+                                         
+                                        <!-- access-ip-box -->
+                                        <div class="access-ip-box">
+                                            <div class="start-ip">127.0.0.1</div>
+                                            <div class="dest-ip">10.0.0.24</div>
+                                        </div>
+                                        <!-- // access-ip-box -->
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+        </div>
+    </div>
+    <div class="popup-footer">
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonColor: 'btn-secondary',
+            buttonText: '승인취소'
+        }) %>
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonText: '승인요청'
+        }) %>
+    </div>
+
+    <div class="popup-close">
+        <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+    </div>
+</div>
+<!-- // popup -->
+
+
+<!-- popup-mask -->
+<div id="popup-mask"></div>
+
+<%- include("../components/10_foot/_foot.html") %>

@@ -305,6 +305,11 @@ textarea.form-text {
 
 // form table
 .form-wrapper {
+
+    & + .form-wrapper {
+        margin-top: 15px;
+    }
+
     .form-tbl-header {
         display: flex;
         height: 35px;
@@ -314,11 +319,13 @@ textarea.form-text {
         .tbl-title {
             @include font(15);
             font-weight: 500;
+            padding-left: 12px;
         }
 
         .btn-wrap {
             margin-top: 0;
             align-self: flex-start;
+            padding-right: 12px;
         }
     }
 
@@ -751,7 +758,7 @@ textarea.form-text {
             background-color: var(--color-white);
 
             &:last-child {
-                border-top: 0;
+                border-bottom: 0;
             }
 
             & > div {
@@ -769,6 +776,18 @@ textarea.form-text {
             .btn-wrap {
                 margin: 0;
             }
+        }
+    }
+}
+
+//
+
+.field {
+    &.full {
+        input[type='text'],
+        input[type='password'],
+        select {
+            width: 100%;
         }
     }
 }
