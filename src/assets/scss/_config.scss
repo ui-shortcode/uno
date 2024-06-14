@@ -467,3 +467,17 @@ $font-weight-primary: 400;
     &::-moz-placeholder { @content; }
     &::-webkit-input-placeholder { @content; }
 }
+
+// font
+@mixin font($size) {
+    font-size: var(--text-#{$size}-font-size);
+    font-weight: var(--text-#{$size}-font-weight);
+    line-height: var(--text-#{$size}-line-height);
+}
+
+// truncate
+@mixin truncate(){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

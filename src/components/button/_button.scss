@@ -64,6 +64,7 @@
         width: 20px;
         height: 20px;
         background-color: #fff;
+        margin-top: -1px;
         margin-right: 3px;
     }
 
@@ -124,12 +125,12 @@
 
     // danger
     &.btn-danger {
-        border-color: var(--color-red-600);
-        background-color: var(--color-red-600);
+        border-color: var(--color-red-500);
+        background-color: var(--color-red-500);
         color: #fff;
 
         &:hover, &:active {
-            background-color: var(--color-red-700);
+            background-color: var(--color-red-600);
         }
 
         i {

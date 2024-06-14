@@ -1,6 +1,8 @@
+<% const showcase = locals.showcase ? locals.showcase : false %>
     </div>
     <!-- // #wrap -->
 
+    <% if (showcase) { %>
     <!-- 개발에는 필요없는 미리보기용 버튼들-->
     <style>
         .case-view { position: fixed; bottom: 80px; right: 0; width: 150px; z-index: 99999;}
@@ -11,5 +13,6 @@
         <button type="button" id="toggle-darkmode">Light/Dark mode</button>
     </div>
     <!-- // 개발에는 필요없는 미리보기용 버튼들-->
+     <% } %>
 </body>
 </html>
