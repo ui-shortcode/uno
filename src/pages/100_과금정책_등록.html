@@ -59,7 +59,42 @@
                         <tr>
                             <th>구간과금</th>
                             <td>
-                                11
+                                <div class="purchase-reg panel-box">
+                                    <div class="panel-th-list">
+                                        <div class="cell-1">임계치</div>
+                                        <div class="cell-2">구간요금(원/건)</div>
+                                        <div class="cell-3">                                            
+                                            <button type="button" class="btn btn-sm btn-secondary btn-outlined btn-icon-right">
+                                                <i class="plus"></i>
+                                                <span class="text">추가</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="panel-box-body">
+                                        <% for(var i = 0; i < 30; i++) {%>
+                                        <!-- panel-list-box -->
+                                        <div class="panel-list-box">
+                                            <div class="cell-1">
+                                                <div class="field">
+                                                    <input type="text" class="form-control form-text" value="x-tran-id">
+                                                </div>
+                                            </div>
+                                            <div class="cell-2">
+                                                <div class="field">
+                                                    <input type="text" class="form-control form-text" value="트랜젝션ID">
+                                                </div>
+                                            </div>
+                                            <div class="cell-3">
+                                                <button type="button" class="btn btn-sm btn-secondary btn-icon-right">
+                                                    <i class="minus"></i>
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- // panel-list-box -->
+                                        <% } %>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </table>
@@ -102,7 +137,26 @@
                         <tr>
                             <th>조정내역</th>
                             <td>
-                                11
+                                <div class="purchase-list panel-box">
+                                    <div class="panel-th-list">
+                                        <div class="cell-1">변경 전</div>
+                                        <div class="cell-2">변경 후</div>
+                                        <div class="cell-3">변경 사유</div>
+                                        <div class="cell-4">변경 일시</div>
+                                    </div>
+                                    <div class="panel-box-body">
+                                        <% for(var i = 0; i < 30; i++) {%>
+                                        <!-- panel-list-box -->
+                                        <div class="panel-list-box">
+                                            <div class="cell-1">1,200</div>
+                                            <div class="cell-2">1,200</div>
+                                            <div class="cell-3">변경</div>
+                                            <div class="cell-4">2024.05.25</div>
+                                        </div>
+                                        <!-- // panel-list-box -->
+                                        <% } %>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </table>
