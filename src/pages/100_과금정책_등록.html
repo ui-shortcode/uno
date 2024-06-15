@@ -1,0 +1,136 @@
+<%- include("../components/00_head/_head.html", { document_title: '과금정책 등록' }) %>
+
+<style>
+    .gap { margin: 20px 0;}
+</style>
+
+
+<!-- popup -->
+<!-- 
+    popup 사이즈
+    default: 800px;
+    .popup-size-lg : 1200px;
+    .popup-size-sm : 620px;
+-->
+<div class="popup-wrapper popup-type-content popup-size-sm">
+    <div class="popup-header">과금정책 등록</div>
+    <div class="popup-body">
+        <div class="popup-content">         
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>
+                                기관 선택
+                                <span class="require">*</span>
+                            </th>
+                            <td>
+                                <div class="field">
+                                    <select class="form-select">
+                                        <option>송금 서비스</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>과금정책 이름 <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>과금유형 <span class="require">*</span></th>
+                            <td>
+                                <div class="field">
+                                    <input type="radio" class="radio-input" id="radio-1-1" checked="">
+                                    <label class="radio" for="radio-1-1"><span>과금</span></label>
+                                    <input type="radio" class="radio-input" id="radio-1-2">
+                                    <label class="radio" for="radio-1-2"><span>보상</span></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>구간과금</th>
+                            <td>
+                                11
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+                     
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <!-- form-tbl-header -->
+                <div class="form-tbl-header">
+                    <span class="tbl-title">
+                        과금정책 보기정보
+                    </span>
+                </div>
+                <!-- // form-tbl-header -->
+
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>기관 선택</th>
+                            <td>청구기관 1</td>
+                        </tr>
+                        <tr>
+                            <th>청구 월</th>
+                            <td>2024-01</td>
+                        </tr>
+                        <tr>
+                            <th>APP 설명</th>
+                            <td>이용기관 1</td>
+                        </tr>
+                        <tr>
+                            <th>총 금액</th>
+                            <td>1,200</td>
+                        </tr>
+                        <tr>
+                            <th>조정내역</th>
+                            <td>
+                                11
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+        </div>
+    </div>
+    <div class="popup-footer">
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonColor: 'btn-secondary',
+            buttonText: '취소'
+        }) %>
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonText: '확인'
+        }) %>
+    </div>
+
+    <div class="popup-close">
+        <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+    </div>
+</div>
+<!-- // popup -->
+
+
+<!-- popup-mask -->
+<div id="popup-mask"></div>
+
+<%- include("../components/10_foot/_foot.html") %>

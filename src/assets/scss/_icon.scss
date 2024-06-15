@@ -29,4 +29,12 @@ i {
     &.upload {
         mask-image: url('../img/icon/svg/upload.svg');
     }
+
+    &.arrow-right {
+        mask-image: url('../img/icon/svg/arrow-right.svg');
+    }
+
+    &.chevron-arrow-right {
+        mask-image: url('../img/icon/svg/chevron-arrow-right.svg');
+    }
 }

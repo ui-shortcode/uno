@@ -1,0 +1,58 @@
+@use "./config" as *;
+
+.tbl-wrapper {
+    position: relative;
+    border: 1px solid var(--color-gray-500);
+    
+    &.list {
+        table {
+            width: 100%;
+            table-layout: fixed;
+
+            thead {
+                border-bottom: 1px solid var(--color-gray-500);
+                tr {
+                    th {
+                        padding: 6px 0;
+                        text-align: center;
+                        @include font(13);
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        text-align: center;
+                        @include truncate();
+                        min-height: 36px;
+                        padding: 8px;
+                        border-bottom: 1px solid var(--color-gray-500);
+                    }
+
+                    &:last-child td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.type-long {
+        max-height: 460px;
+        overflow-y: auto;
+        
+        table {
+            thead {
+                position: sticky;
+                top: 0;
+                z-index: 1;
+
+                th {
+                    background-color: var(--color-gray-300);
+                }
+            }
+        }
+    }
+}

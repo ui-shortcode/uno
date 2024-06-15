@@ -1,0 +1,115 @@
+<%- include("../components/00_head/_head.html", { document_title: 'G/W 등록' }) %>
+
+<style>
+    .gap { margin: 20px 0;}
+</style>
+
+
+<!-- popup -->
+<!-- 
+    popup 사이즈
+    default: 800px;
+    .popup-size-lg : 1200px;
+    .popup-size-sm : 620px;
+-->
+<div class="popup-wrapper popup-type-content popup-size-sm">
+    <div class="popup-header">G/W 등록</div>
+    <div class="popup-body">
+        <div class="popup-content">         
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>
+                                커뮤니티 구분
+                                <span class="require">*</span>
+                            </th>
+                            <td>
+                                <div class="field">
+                                    <select class="form-select">
+                                        <option>송금 서비스</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이름 <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="1원 송금 API - 승인요청">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>URL <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text">
+                                </div>
+                                <span class="desc with-icon">기입예: https://10.10.10.10:8443</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>G/W 연동계정<br>(이름) <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text">
+                                </div>
+                                <span class="desc with-icon">UNO-Gateway Designer에 설정된 외부 연동을 위한 계정 정보</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>G/W 연동계정<br>(패스워드) <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="password" class="form-control form-text">
+                                </div>
+                                <span class="desc with-icon">UNO-Gateway Designer에 설정된 외부 연동을 위한 계정 정보</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>공지 팝업 기능</th>
+                            <td>
+                                <div class="field">
+                                    <label class="toggle">
+                                        <input type="checkbox" class="toggle-input">
+                                        <div class="toggle-switch"></div>
+                                        <span class="toggle-label">허용/차단 여부</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+        </div>
+    </div>
+    <div class="popup-footer">
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonColor: 'btn-secondary',
+            buttonText: '취소'
+        }) %>
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonText: '확인'
+        }) %>
+    </div>
+
+    <div class="popup-close">
+        <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+    </div>
+</div>
+<!-- // popup -->
+
+
+<!-- popup-mask -->
+<div id="popup-mask"></div>
+
+<%- include("../components/10_foot/_foot.html") %>

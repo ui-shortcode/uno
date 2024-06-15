@@ -96,21 +96,28 @@
                         <div class="upload-popup-form">
                             <div class="field-box">
                                 <input type="file" class="upload-input">
-        
                                 <div class="field">
-                                    <%- include('../components/button/_button.html', {
-                                        buttonType: 'button',
-                                        buttonColor: 'btn-secondary',
-                                        buttonOutlined: true,
-                                        buttonIcon: 'upload',
-                                        buttonText: '파일선택'
-                                    }) %>
+                                    <button type="button" class="btn btn-medium btn-secondary btn-outlined">
+                                        <i class="upload"></i>
+                                        <span class="text">파일선택</span>
+                                    </button>
                                 </div>
-        
-                                <%- include('../components/forms/_text.html', {
-                                    formInputDelete: true,
-                                    formPlaceholder: '파일명 입력'
-                                }) %>
+                                <div class="upload-file-list">
+                                    <div class="field with-delete">
+                                        <input type="text" class="form-control form-text" value="" placeholder="파일명 입력">
+                                        <button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button>
+                                    </div>
+                                    
+                                    <div class="field with-delete">
+                                        <input type="text" class="form-control form-text" value="" placeholder="파일명 입력">
+                                        <button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button>
+                                    </div>
+                                    
+                                    <div class="field with-delete">
+                                        <input type="text" class="form-control form-text" value="" placeholder="파일명 입력">
+                                        <button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </td>
@@ -217,6 +224,21 @@
                     </td>
                 </tr>
                 <tr>
+                    <th>할인율(%)</th>
+                    <td colspan="3">
+                        <div class="form-inner-box">
+                            <div class="field">
+                                <input type="text" class="form-control form-text" size="1" value="0">
+                            </div>
+                            <span>.</span>
+                            <div class="field">
+                                <input type="text" class="form-control form-text" size="1" value="01">
+                            </div>
+                        </div>
+                        <span class="desc with-icon">범위: 0.01~100.00 [소숫점 둘째자리 허용]</span>
+                    </td>
+                </tr>
+                <tr>
                     <th>비밀번호 <span class="require">*</span></th>
                     <td colspan="3">
                         <div class="form-inner-box">
@@ -308,17 +330,12 @@
                         <div class="upload-popup-form with-preview">
                             <div class="field-box">
                                 <input type="file" class="upload-input">
-        
                                 <div class="field">
-                                    <%- include('../components/button/_button.html', {
-                                        buttonType: 'button',
-                                        buttonColor: 'btn-secondary',
-                                        buttonOutlined: true,
-                                        buttonIcon: 'upload',
-                                        buttonText: '파일선택'
-                                    }) %>
+                                    <button type="button" class="btn btn-medium btn-secondary btn-outlined">
+                                        <i class="upload"></i>
+                                        <span class="text">파일선택</span>
+                                    </button>
                                 </div>
-        
                                 <div class="upload-image-preview">
                                     <img src="../assets/img/example/upload-example.jpg" alt="">
                                     <button type="button" class="btn-del"><span class="sr-hide">삭제</span></button>
@@ -385,13 +402,17 @@
                 <tr>
                     <th>원본데이터</th>
                     <td colspan="3">
-                        <textarea class="form-control form-text" style="height: 150px;">오류내용 파악을 위하여 원본 데이터의 내용을 보여준다.</textarea>
+                        <div class="field">
+                            <textarea class="form-control form-text" style="height: 150px;">오류내용 파악을 위하여 원본 데이터의 내용을 보여준다.</textarea>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <th>오류데이터</th>
                     <td colspan="3">
-                        <textarea class="form-control form-text" style="height: 150px;">오류내용 파악을 위하여 원본 데이터의 내용을 보여준다.</textarea>
+                        <div class="field">
+                            <textarea class="form-control form-text" style="height: 150px;">오류내용 파악을 위하여 원본 데이터의 내용을 보여준다.</textarea>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -426,7 +447,7 @@
                             <div class="title">
                                 <span>[제공1기관] 1원 송금 API</span>
                             </div>
-                            <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                            <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                         </div>
                     </td>
                 </tr>
@@ -457,158 +478,158 @@
         <!-- // form-tbl-header -->
 
         <div class="form-tbl-body">
-            <div class="approve-wrapper">
-                <div class="approve-box approve-charger">
-                    <div class="approve-box-header">
+            <div class="panel-wrapper">
+                <div class="panel-box panel-charger">
+                    <div class="panel-box-header">
                         승인자 정보
                     </div>
-                    <div class="approve-th-list">
+                    <div class="panel-th-list">
                         <span>데이터</span>
                         <span>닉네임</span>
                         <span>선택</span>
                     </div>
-                    <div class="approve-box-body">
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1managerp1manager</div>
-                            <div class="approve-nickname">1제공매니저1제공매니저1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                    <div class="panel-box-body">
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1managerp1manager</div>
+                            <div class="panel-nickname">1제공매니저1제공매니저1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
-                                <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
+                                <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                     </div>
                 </div>
 
-                <div class="approve-box approve-line">
-                    <div class="approve-box-header">
+                <div class="panel-box panel-line">
+                    <div class="panel-box-header">
                         승인 라인
                     </div>
-                    <div class="approve-th-list">
+                    <div class="panel-th-list">
                         <span>데이터</span>
                         <span>닉네임</span>
                         <span>선택</span>
                     </div>
-                    <div class="approve-box-body">
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
+                    <div class="panel-box-body">
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
                                 <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
                                 <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저1제공매니저1제공매니저</div>
-                            <div class="approve-util">
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저1제공매니저1제공매니저</div>
+                            <div class="panel-util">
                                 <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                          
-                        <!-- approve-list-box -->
-                        <div class="approve-list-box">
-                            <div class="approve-data">p1manager</div>
-                            <div class="approve-nickname">1제공매니저</div>
-                            <div class="approve-util">
+                        <!-- panel-list-box -->
+                        <div class="panel-list-box">
+                            <div class="panel-data">p1manager</div>
+                            <div class="panel-nickname">1제공매니저</div>
+                            <div class="panel-util">
                                 <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                             </div>
                         </div>
-                        <!-- // approve-list-box -->
+                        <!-- // panel-list-box -->
                     </div>
                 </div>
             </div>

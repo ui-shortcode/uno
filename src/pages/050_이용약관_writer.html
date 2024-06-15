@@ -1,0 +1,127 @@
+<%- include("../components/00_head/_head.html", { document_title: 'API 이용약관 등록/수정' }) %>
+
+<style>
+    .gap { margin: 20px 0;}
+</style>
+
+
+<!-- popup -->
+<!-- 
+    popup 사이즈
+    default: 800px;
+    .popup-size-lg : 1200px;
+    .popup-size-sm : 620px;
+-->
+<div class="popup-wrapper popup-type-content">
+    <div class="popup-header">API 이용약관 등록/수정</div>
+    <div class="popup-body">
+        <div class="popup-content">   
+
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:135px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>기관 <span class="require">*</span></th>
+                            <td>
+                                <div class="field">
+                                    <select class="form-select" style="width:50%;">
+                                        <option>기관선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>약관명 <span class="require">*</span></th>
+                            <td>
+                                <div class="field">
+                                    <input type="text" class="form-control form-text" value="송금서비스">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">약관내용 <span class="require">*</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="editor-wrapper">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>첨부파일</th>
+                            <td>
+                                <div class="upload-popup-form">
+                                    <div class="field-box">
+                                        <input type="file" class="upload-input">
+                                        <div class="field">
+                                            <button type="button" class="btn btn-medium btn-primary btn-outlined">
+                                                <i class="upload"></i>
+                                                <span class="text">파일선택</span>
+                                            </button>
+                                        </div>
+                                        <div class="upload-file-list">
+                                            <div class="field with-delete">
+                                                <input type="text" class="form-control form-text" value="" placeholder="파일명 입력">
+                                                <button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button>
+                                            </div>
+                                            
+                                            <div class="field with-delete">
+                                                <input type="text" class="form-control form-text" value="" placeholder="파일명 입력">
+                                                <button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button>
+                                            </div>
+                                            
+                                            <div class="field with-delete">
+                                                <input type="text" class="form-control form-text" value="" placeholder="파일명 입력">
+                                                <button type="button" class="btn-form-delete"><span class="sr-hide">삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="round-block">
+                    <strong>해당 이용약관을 기본으로 사용하시겠습니까?</strong>
+                </div>
+
+                <div class="round-block">
+                    <div class="field">
+                        <input type="checkbox" class="checkbox-input" id="check-1-1" checked="">
+                        <label class="checkbox" for="check-1-1"><span>상기 이용약관에 동의합니다.</span><span class="text-danger">(필수)</span></label>
+                    </div>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+        </div>
+    </div>
+    <div class="popup-footer">
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonColor: 'btn-secondary',
+            buttonText: '취소'
+        }) %>
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonText: '확인'
+        }) %>
+    </div>
+
+    <div class="popup-close">
+        <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+    </div>
+</div>
+<!-- // popup -->
+
+
+<!-- popup-mask -->
+<div id="popup-mask"></div>
+
+<%- include("../components/10_foot/_foot.html") %>

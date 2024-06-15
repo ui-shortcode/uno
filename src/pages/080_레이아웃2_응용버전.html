@@ -1,0 +1,298 @@
+<%- include("../components/00_head/_head.html", { document_title: 'APP 등록/수정' }) %>
+
+<style>
+    .gap { margin: 20px 0;}
+</style>
+
+
+<!-- popup -->
+<!-- 
+    popup 사이즈
+    default: 800px;
+    .popup-size-lg : 1200px;
+    .popup-size-sm : 620px;
+-->
+<div class="popup-wrapper popup-type-content popup-size-lg">
+    <div class="popup-header">APP 등록/수정</div>
+    <div class="popup-body">
+        <div class="popup-content">         
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:160px;">
+                            <col style="width:auto;">
+                            <col style="width:160px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>API명 <span class="require">*</span></th>
+                            <td colspan="3">
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="1원 송금 API - 승인요청">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>HTTP Method <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="POST">
+                                </div>
+                            </td>
+                            <th>설명 <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="송금 서비스 API 입니다.">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>API 제공자 <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="1제공자">
+                                </div>
+                            </td>
+                            <th>API 요청자 <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="유앤아워스">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청 Content Type <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="application/json; chartset=UTF-8">
+                                </div>
+                            </td>
+                            <th>응답 Content Type <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="application/json; chartset=UTF-8">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>API URI <span class="require">*</span></th>
+                            <td>
+                                <div class="field full">
+                                    <input type="text" class="form-control form-text" value="/api/send">
+                                </div>
+                            </td>
+                            <th rowspan="2">이미지 등록 <span class="require">*</span></th>
+                            <td rowspan="2">
+                                <div class="upload-popup-form with-preview">
+                                    <div class="field-box">
+                                        <input type="file" class="upload-input">
+                                        <div class="field">
+                                            <button type="button" class="btn btn-medium btn-secondary btn-outlined">
+                                                <i class="upload"></i>
+                                                <span class="text">파일선택</span>
+                                            </button>
+                                        </div>
+                                        <div class="upload-image-preview">
+                                            <img src="../assets/img/example/upload-example.jpg" alt="">
+                                            <button type="button" class="btn-del"><span class="sr-hide">삭제</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>공개여부 <span class="require">*</span></th>
+                            <td>
+                                <div class="form-inner-box">
+                                    <div class="field">
+                                        <label class="toggle">
+                                            <input type="checkbox" class="toggle-input">
+                                            <div class="toggle-switch"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="message-spec-wrapper">
+                    <div class="message-spec-box">
+                        <div class="message-spec-title">요청 메세지 명세</div>
+                        <div class="message-spec-subtitle">Header</div>
+                        <div class="message-tbl-header">
+                            <div class="cell-1">항목명</div>
+                            <div class="cell-2">항목설정</div>
+                            <div class="cell-3">필수</div>
+                            <div class="cell-4">타입길이</div>
+                            <div class="cell-5">비고</div>
+                            <div class="cell-6">
+                                <button type="button" class="btn btn-sm btn-secondary btn-outlined btn-icon-right">
+                                    <i class="plus"></i>
+                                    <span class="text">추가</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="message-tbl-body request-header">
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                        </div>
+                        <div class="message-spec-subtitle">Parameter</div>
+                        <div class="message-tbl-header">
+                            <div class="cell-1">항목명</div>
+                            <div class="cell-2">항목설정</div>
+                            <div class="cell-3">필수</div>
+                            <div class="cell-4">타입길이</div>
+                            <div class="cell-5">비고</div>
+                            <div class="cell-6">
+                                <button type="button" class="btn btn-sm btn-secondary btn-outlined btn-icon-right">
+                                    <i class="plus"></i>
+                                    <span class="text">추가</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="message-tbl-body request-parameter">
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                        </div>
+                        <div class="message-spec-subtitle">Body</div>
+                        <div class="message-tbl-header">
+                            <div class="cell-1">항목명</div>
+                            <div class="cell-2">항목설정</div>
+                            <div class="cell-3">필수</div>
+                            <div class="cell-4">타입길이</div>
+                            <div class="cell-5">비고</div>
+                            <div class="cell-6">
+                                <button type="button" class="btn btn-sm btn-secondary btn-outlined btn-icon-right">
+                                    <i class="plus"></i>
+                                    <span class="text">추가</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="message-tbl-body request-body">
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                        </div>
+                    </div>
+                    
+                    <div class="message-spec-box">
+                        <div class="message-spec-title">응답 메세지 명세</div>
+                        <div class="message-spec-subtitle">Header</div>
+                        <div class="message-tbl-header">
+                            <div class="cell-1">항목명</div>
+                            <div class="cell-2">항목설정</div>
+                            <div class="cell-3">필수</div>
+                            <div class="cell-4">타입길이</div>
+                            <div class="cell-5">비고</div>
+                            <div class="cell-6">
+                                <button type="button" class="btn btn-sm btn-secondary btn-outlined btn-icon-right">
+                                    <i class="plus"></i>
+                                    <span class="text">추가</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="message-tbl-body response-header">
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                        </div>
+                        <div class="message-spec-subtitle">Body</div>
+                        <div class="message-tbl-header">
+                            <div class="cell-1">항목명</div>
+                            <div class="cell-2">항목설정</div>
+                            <div class="cell-3">필수</div>
+                            <div class="cell-4">타입길이</div>
+                            <div class="cell-5">비고</div>
+                            <div class="cell-6">
+                                <button type="button" class="btn btn-sm btn-secondary btn-outlined btn-icon-right">
+                                    <i class="plus"></i>
+                                    <span class="text">추가</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="message-tbl-body response-body">
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                            <%- include('../components/100_example/_message-spec-item.html') %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+
+            <!-- form-wrapper -->
+            <div class="form-wrapper">
+                <div class="form-tbl-body">
+                    <table class="not-list">
+                        <colgroup>
+                            <col style="width:160px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tr>
+                            <th>원본데이터</th>
+                            <td colspan="3">
+                                <div class="field">
+                                    <textarea class="form-control form-text" style="height: 75px;">1원 송금 API - 승인요청</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>오류데이터</th>
+                            <td colspan="3">
+                                <div class="field">
+                                    <textarea class="form-control form-text" style="height: 75px;">1원 송금 API - 승인요청</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- // form-wrapper -->
+        </div>
+    </div>
+    <div class="popup-footer">
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonColor: 'btn-secondary',
+            buttonText: '취소'
+        }) %>
+        <%- include('../components/button/_button.html', {
+            buttonSize: 'btn-lg',
+            buttonText: '저장'
+        }) %>
+    </div>
+
+    <div class="popup-close">
+        <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+    </div>
+</div>
+<!-- // popup -->
+
+
+<!-- popup-mask -->
+<div id="popup-mask"></div>
+
+<%- include("../components/10_foot/_foot.html") %>

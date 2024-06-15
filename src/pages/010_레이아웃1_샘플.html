@@ -1,4 +1,4 @@
-<%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
+<%- include("../components/00_head/_head.html", { document_title: 'APP 승인요청' }) %>
 
 <style>
     .gap { margin: 20px 0;}
@@ -54,7 +54,9 @@
                         <tr>
                             <th>내용</th>
                             <td colspan="3">
-                                <textarea class="form-control form-text" style="height: 54px;">승인 또는 반려 의견 입력</textarea>
+                                <div class="field">
+                                    <textarea class="form-control form-text" style="height: 54px;">승인 또는 반려 의견 입력</textarea>
+                                </div>
                             </td>
                         </tr>
                     </table>
@@ -77,158 +79,158 @@
                 <!-- // form-tbl-header -->
         
                 <div class="form-tbl-body">
-                    <div class="approve-wrapper">
-                        <div class="approve-box approve-charger">
-                            <div class="approve-box-header">
+                    <div class="panel-wrapper">
+                        <div class="panel-box panel-charger">
+                            <div class="panel-box-header">
                                 승인자 정보
                             </div>
-                            <div class="approve-th-list">
+                            <div class="panel-th-list">
                                 <span>데이터</span>
                                 <span>닉네임</span>
                                 <span>선택</span>
                             </div>
-                            <div class="approve-box-body">
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1managerp1manager</div>
-                                    <div class="approve-nickname">1제공매니저1제공매니저1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                            <div class="panel-box-body">
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1managerp1manager</div>
+                                    <div class="panel-nickname">1제공매니저1제공매니저1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
-                                        <button type="button" class="btn btn-sm btn-secondary btn-select"><span>선택</span></button>
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
+                                        <button type="button" class="btn btn-sm btn-secondary btn-select btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                             </div>
                         </div>
         
-                        <div class="approve-box approve-line">
-                            <div class="approve-box-header">
+                        <div class="panel-box panel-line">
+                            <div class="panel-box-header">
                                 승인 라인
                             </div>
-                            <div class="approve-th-list">
+                            <div class="panel-th-list">
                                 <span>데이터</span>
                                 <span>닉네임</span>
                                 <span>선택</span>
                             </div>
-                            <div class="approve-box-body">
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
+                            <div class="panel-box-body">
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
                                         <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
                                         <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저1제공매니저1제공매니저</div>
-                                    <div class="approve-util">
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저1제공매니저1제공매니저</div>
+                                    <div class="panel-util">
                                         <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                                  
-                                <!-- approve-list-box -->
-                                <div class="approve-list-box">
-                                    <div class="approve-data">p1manager</div>
-                                    <div class="approve-nickname">1제공매니저</div>
-                                    <div class="approve-util">
+                                <!-- panel-list-box -->
+                                <div class="panel-list-box">
+                                    <div class="panel-data">p1manager</div>
+                                    <div class="panel-nickname">1제공매니저</div>
+                                    <div class="panel-util">
                                         <button type="button" class="btn btn-sm btn-danger"><span>선택 취소</span></button>
                                     </div>
                                 </div>
-                                <!-- // approve-list-box -->
+                                <!-- // panel-list-box -->
                             </div>
                         </div>
                     </div>
