@@ -1,0 +1,93 @@
+@use "./config" as *;
+
+.flatpickr-current-month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span.cur-month {
+        order: 1;
+    }
+
+    .numInputWrapper {
+        order: 0;
+    }
+}
+
+//
+
+table.dataTable {
+    width: 100%;
+}
+
+table.dataTable > thead > tr > th {
+    text-align: center !important;
+    white-space: nowrap;
+    color: var(--color-gray-700);
+    background-color: var(--color-gray-300);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+div.dt-container th .dt-column-title {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+table.dataTable > tbody > tr > td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px 8px;
+}
+
+div.dt-container .dt-layout-row:nth-child(1) {
+    display: none;
+}
+
+div.dt-container .dt-layout-row:last-child .dt-start {
+    display: none;
+}
+
+div.dt-container .dt-layout-row:last-child .dt-end {
+    text-align: center;
+}
+
+div.dt-container .dt-paging {
+    margin-top: 5px;
+}
+
+div.dt-container .dt-paging .dt-paging-button.current {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: none;
+}
+
+div.dt-container .dt-paging .dt-paging-button {
+    color: var(--color-gray-600) !important;
+    border-radius: 4px;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+    color: var(--color-gray-600) !important;
+    background: var(--color-gray-100);
+}
+
+div.dt-container input.txt {
+    min-width: 60px;
+    height: 25px;
+}
+
+div.dt-container .underline {
+    color: var(--color-gray-800);
+    text-decoration: underline;
+}
+
+div.dt-container .toggle-container {
+    width: 100%;
+
+    .toggle {
+        width: 100%;
+        justify-content: center;
+    }
+}

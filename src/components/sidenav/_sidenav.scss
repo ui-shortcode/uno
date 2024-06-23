@@ -32,6 +32,7 @@ aside#sidenav {
 
 aside#sidenav {
     width: var(--sidenav-width);
+    min-width: var(--sidenav-width);
     max-width: var(--sidenav-width);
     min-height: 100%;
     height: 100%;

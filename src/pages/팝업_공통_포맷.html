@@ -1,0 +1,639 @@
+<%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
+
+<!-- popup -->
+<div class="popup-wrapper">
+    <div class="popup-container popup-type-content">
+        <div class="popup-header">
+            팝업 타이틀
+        </div>
+        <div class="popup-body">
+            <div class="popup-content">
+
+                <!-- field-wrapper -->
+                <div class="field-wrapper">
+                    <div class="field-container">
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">API명 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt" placeholder="승인선명 입력">
+                                </div>
+                            </div>
+                            <div class="label-cell">상태</div>
+                            <div class="field-cell">
+                                <span class="badge badge-success">성공</span>
+                                <span class="badge badge-danger">실패</span>
+                                <span class="badge badge-primary">진행중</span>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">API명 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt" placeholder="승인선명 입력">
+                                </div>
+                            </div>
+                            <div class="label-cell">활성상태</div>
+                            <div class="field-cell">
+                                <div class="checkbox-container">
+                                    <div class="field">
+                                        <input type="checkbox" class="checkbox" id="checkbox-1-1" name="checkbox-1-1" checked>
+                                        <label for="checkbox-1-1" class="checkbox-label">활성</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">제목 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt" value="1원 송금 API 승인요청">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">승인요청자 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt" value="제공기관1 매니저">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">승인의견</div>
+                            <div class="field-cell">
+                                <div class="textarea-btn-container">
+                                    <div class="field">
+                                        <textarea id="textarea-1">내용을 입력하세요.</textarea>
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn btn-secondary btn-outlined"><span>취소</span></button>
+                                            <button type="button" class="btn btn-primary btn-outlined"><span>승인</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">내용</div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <textarea id="textarea-1">내용을 입력하세요.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">기관 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <select>
+                                        <option value="">기관전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">첨부파일 등록</div>
+                            <div class="field-cell">
+                                <div class="file-upload-container">
+                                    <input type="file" class="txt upload">
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-secondary btn-outlined"><i class="upload"></i><span>파일선택</span></button>
+                                    </div>
+                                    <div class="field-wrap">
+                                        <div class="field with-del">
+                                            <input type="text" class="txt" placeholder="파일명 입력">
+                                            <button type="button" class="btn-del"><i class="del"></i><span class="sr-hide">파일선택</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">전화번호</div>
+                            <div class="field-cell">
+                                <div class="phone">
+                                    <div class="field">
+                                        <select>
+                                            <option>02</option>
+                                        </select>
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">휴대번호</div>
+                            <div class="field-cell">
+                                <div class="phone">
+                                    <div class="field">
+                                        <select>
+                                            <option>010</option>
+                                        </select>
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">사업자등록번호 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="company-no">
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">법인등록번호 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="certificate-business-no">
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                    <span>-</span>
+                                    <div class="field">
+                                        <input type="text" class="txt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">기간선택 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt period-date" value="2024.05.05 ~ 2024.05.31" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">할인율 (%)</div>
+                            <div class="field-cell">
+                                <input type="text" class="txt num" value="0">
+                                <span>.</span>
+                                <input type="text" class="txt num" value="0">
+
+                                <p class="primary horizontal no-icon">범위: 0.01-100.00 [소숫점 둘째자리 허용]</p>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">비밀번호 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="password" class="txt" placeholder="비밀번호 입력" style="width: 240px;">
+                                    <p class="primary horizontal no-icon">※ 영문/숫자/특수문자 포함 최소8자/연속3자제외</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">비밀번호 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="password" class="txt" placeholder="비밀번호 입력" style="width: 240px;">
+                                    <p class="primary horizontal">영문/숫자/특수문자 포함 최소8자/연속3자제외</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">비밀번호 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="password" class="txt" placeholder="비밀번호 입력" style="width: 240px;">
+                                    <p class="primary">영문/숫자/특수문자 포함 최소8자/연속3자제외</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">비밀번호 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="password" class="txt error" placeholder="비밀번호 입력" style="width: 240px;">
+                                    <p class="error horizontal">영문/숫자/특수문자 포함 최소8자/연속3자제외</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">비밀번호 확인 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="password" class="txt" placeholder="비밀번호 입력" style="width: 240px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">과금유형</div>
+                            <div class="field-cell">
+                                <div class="radio-container">
+                                    <div class="field">
+                                        <input type="radio" class="radio" id="radio-1-1" name="radio-1-1" checked>
+                                        <label for="radio-1-1" class="radio-label">과금</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="radio" class="radio" id="radio-1-2" name="radio-1-1">
+                                        <label for="radio-1-2" class="radio-label">보상</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="radio" class="radio" id="radio-1-3" name="radio-1-1" disabled>
+                                        <label for="radio-1-3" class="radio-label">Label</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">비회원 글쓰기</div>
+                            <div class="field-cell">
+                                <div class="toggle-container">
+                                    <label class="toggle">
+                                        <input type="checkbox" class="toggle-input">
+                                        <div class="toggle-switch"></div>
+                                        <span class="toggle-label ">허용/차단 여부</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">활성화 체크</div>
+                            <div class="field-cell">
+                                <div class="checkbox-container">
+                                    <div class="field">
+                                        <input type="checkbox" class="checkbox" id="checkbox-2-1" name="checkbox-2-1" checked>
+                                        <label for="checkbox-1-1" class="checkbox-label">허용/차단</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" class="checkbox" id="checkbox-2-2" name="checkbox-2-2">
+                                        <label for="checkbox-2-2" class="checkbox-label">활성화</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" class="checkbox" id="checkbox-2-3" name="checkbox-2-3" disabled>
+                                        <label for="checkbox-2-3" class="checkbox-label">Label</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">활성화 체크</div>
+                            <div class="field-cell">
+                                <div class="file-upload-container">
+                                    <input type="file" class="txt upload">
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-secondary btn-outlined"><i class="upload"></i><span>파일선택</span></button>
+                                    </div>
+                                    <div class="field-wrap">
+                                        <div class="upload-image">
+                                            <img src="../assets/img/example/upload-example.jpg" alt="">
+                                            <button type="button" class="btn-del"><i class="del"></i><span class="sr-hide">파일선택</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">코드값</div>
+                            <div class="field-cell">
+                                <div class="codeview-container">
+                                    <div class="field-box">
+                                        <div class="field">
+                                            <input type="text" class="txt num" placeholder="Num">
+                                            <button type="button" class="btn btn-sm btn-secondary"><span>확인</span></button>
+                                        </div>
+                                        <div class="chk-msg-box">
+                                            <span>체크 메세지 체크 메세지 체크 메세지 체크 메세지 체크 메세지</span>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-container">
+                                        <label class="toggle">
+                                            <input type="checkbox" class="toggle-input" checked>
+                                            <div class="toggle-switch"></div>
+                                            <span class="toggle-label">Label</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP Secret</div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <button class="btn btn-primary btn-outlined"><span>조회</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP 버전</div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <button type="button" class="btn btn-secondary btn-outlined btn-round"><span>Ver 1.2.1</span></button>
+                                </div>
+                            </div>
+                            <div class="label-cell">이용약관</div>
+                            <div class="field-cell">
+                                <div class="text-btn-container">
+                                    <div class="field">
+                                        <span>이용약관</span>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-primary btn-outlined"><span>약관보기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">첨부파일</div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <button type="button" class="btn-file-view"><i class="doc"></i><span>약관보기 파일명</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">파일 다운로드</div>
+                            <div class="field-cell">
+                                <div class="file-download-container">
+                                    <button type="button" class="btn btn-primary btn-outlined"><i class="download"></i><span>파일 다운로드</span></button>
+                                    <div class="filename"><span>파일명 파일명 파일명 파일명</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">원본 데이터</div>
+                            <div class="field-cell">
+                                <textarea style="height:150px;">오류내용 파악을 위하여 원본 데이터의 내용을 보여준다.</textarea>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">오류 데이터</div>
+                            <div class="field-cell">
+                                <textarea style="height:150px;">오류시에만 내용 표시</textarea>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">승인 제공기관<br>선택</div>
+                            <div class="field-cell">
+                                <div class="scroll-box">
+                                    <ul>
+                                        <% for(var i = 1 ; i < 21; i++) { %>
+                                        <li>
+                                            <div class="checkbox-container">
+                                                <div class="field">
+                                                    <input type="checkbox" class="checkbox" id="checkbox-1-<%= i %>" name="checkbox-1-<%= i %>">
+                                                    <label for="checkbox-1-<%= i %>" class="checkbox-label">제공기관명 <%= i %></label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">App list 1</div>
+                            <div class="field-cell">
+                                <div class="applist-type-1">
+                                    <div class="title">
+                                        <strong>[제공1기관]</strong>
+                                        <span>1원 송금 API</span>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-secondary btn-sm btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">App list 2</div>
+                            <div class="field-cell">
+                                <div class="applist-type-2">
+                                    <div class="title">
+                                        <button type="button" class="btn-del"><i class="del"></i><span class="sr-hide">파일선택</span></button>
+                                        <strong>[제공1기관]</strong>
+                                        <span>1원 송금 API</span>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-secondary btn-outlined btn-sm"><span>약관동의</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+
+                    </div>
+                </div>
+                <!-- // field-wrapper -->
+
+                <!-- field-wrapper -->
+                <div class="field-wrapper">
+                    <div class="field-header">
+                        <div class="title">기본정보</div>
+                        <div class="btn-wrap">
+                            <button type="buttno" class="btn btn-primary btn-lg"><span>승인라인 저장</span></button>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                    </div>
+                </div>
+                <!-- // field-wrapper -->
+
+                <!-- field-wrapper -->
+                <div class="field-wrapper">
+                    <div class="field-header">
+                        <div class="title">기본정보</div>
+                    </div>
+                    <div class="field-container">
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP명</div>
+                            <div class="field-cell">송금 APP</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP 설명</div>
+                            <div class="field-cell">송금 APP</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">내용</div>
+                            <div class="field-cell">승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다. 승인합니다.</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP 설명</div>
+                            <div class="field-cell">등록기관명</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP Key</div>
+                            <div class="field-cell">UNOxxzBDh2qc1z6DJ7OD1iE7lCdMoOocHD6ak</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">API 목록</div>
+                            <div class="field-cell">
+                                <div class="scroll-box">
+                                    <ul>
+                                        <% for(var i = 1 ; i < 21; i++) { %>
+                                        <li>1원 송금 API</li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">접근 IP</div>
+                            <div class="field-cell">
+                                
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                    </div>
+                </div>
+                <!-- // field-wrapper -->
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-secondary btn-lg"><span>취소</span></button>
+                <button type="button" class="btn btn-primary btn-lg"><span>확인</span></button>
+            </div>
+        </div>
+
+        <div class="popup-close">
+            <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+        </div>
+    </div>
+</div>
+<!-- // popup -->
+
+<%- include("../components/10_foot/_foot.html") %>

@@ -1,0 +1,183 @@
+<%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
+
+<!-- popup -->
+<div class="popup-wrapper">
+    <div class="popup-container popup-type-content">
+        <div class="popup-header">
+            API 승인요청
+        </div>
+        <div class="popup-body">
+            <div class="popup-content">
+
+                <!-- field-wrapper -->
+                <div class="field-wrapper">
+                    <div class="field-container">
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">기관</div>
+                            <div class="field-cell">제공기관</div>
+                            <div class="label-cell">상태</div>
+                            <div class="field-cell">
+                                <span class="badge badge-success">수정 진행중</span>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">제목 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt" value="1원 송금 API 승인요청">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">승인요청자 <span class="require">*</span></div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <input type="text" class="txt" value="제공기관1 매니저">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">내용</div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <textarea id="textarea-1">내용을 입력하세요.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                    </div>
+                </div>
+                <!-- // field-wrapper -->
+
+                <!-- field-wrapper -->
+                <div class="field-wrapper">
+                    <div class="field-header">
+                        <div class="title">승인라인 선택</div>
+                        <div class="btn-wrap">
+                            <button type="buttno" class="btn btn-primary btn-lg"><span>승인라인 저장</span></button>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                    </div>
+                </div>
+                <!-- // field-wrapper -->
+
+                <!-- field-wrapper -->
+                <div class="field-wrapper">
+                    <div class="field-header">
+                        <div class="title">기본정보</div>
+                    </div>
+                    <div class="field-container">
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP 버전</div>
+                            <div class="field-cell">v2</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP 이름</div>
+                            <div class="field-cell">1원 송금 API</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">등록기관</div>
+                            <div class="field-cell">등록기관명</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">패턴</div>
+                            <div class="field-cell">패턴1</div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">APP Secret</div>
+                            <div class="field-cell">
+                                <button type="button" class="btn btn-primary btn-outlined"><span>조회</span></button>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">승인선명</div>
+                            <div class="field-cell">
+                                <div class="field-wrap">
+                                    <div class="field">
+                                        <select>
+                                            <option>Field</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="label-cell">이용약관</div>
+                            <div class="field-cell">
+                                <div class="text-btn-container">
+                                    <div class="field">
+                                        <span>이용약관</span>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-primary btn-outlined"><span>약관보기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">첨부파일</div>
+                            <div class="field-cell">
+                                <div class="field">
+                                    <button type="button" class="btn-file-view"><i class="doc"></i><span>약관보기 파일명</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                        
+                        <!-- field-box -->
+                        <div class="field-box">
+                            <div class="label-cell">접근 IP</div>
+                            <div class="field-cell">
+                                
+                            </div>
+                        </div>
+                        <!-- // field-box -->
+                    </div>
+                </div>
+                <!-- // field-wrapper -->
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-secondary btn-lg"><span>승인취소</span></button>
+                <button type="button" class="btn btn-primary btn-lg"><span>승인요청</span></button>
+            </div>
+        </div>
+
+        <div class="popup-close">
+            <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+        </div>
+    </div>
+</div>
+<!-- // popup -->
+
+<%- include("../components/10_foot/_foot.html") %>

@@ -25,4 +25,81 @@ $(function(){
         }
     });
 
+    // flat picker - date
+    flatpickr(".date", {
+        locale: "ko",
+        dateFormat: "Y.m.d"
+    });
+
+    // flat picker - period
+    flatpickr(".period-date", {
+        locale: "ko",
+        mode: "range",
+        showMonths: 2,
+        dateFormat: "Y.m.d"
+    })
+
+    // flat picker - month
+    flatpickr(".month", {
+        locale: "ko",
+        plugins: [
+            new monthSelectPlugin({
+                dateFormat: "Y.m",
+            })
+        ]
+    });
+
+    // data tables 1
+    $('#data-table-1').DataTable({
+        searching: false,
+        // paging: false,
+        ordering: false,
+        pageLength: 10,
+        // scrollCollapse: true,
+        // scrollY: '200px',
+        language: {
+            info: '총 _TOTAL_ 개의 행 중 _START_ 행 부터 _END_ 행 까지',
+            infoEmpty: '데이터가 없습니다.',
+            emptyTable: '데이터가 없습니다.',
+            thousands: ',',
+            lengthMenu: '총 _MENU_ 행씩 보기',
+            loadingRecords: '로딩 중',
+            processing: '동작 중',
+            zeroRecords: '검색 결과 없음',
+            paginate: {
+                first: '처음',
+                last: '마지막',
+                next: '다음',
+                previous: '이전'
+            },
+            search: '검색'
+        }
+    });
+
+    // data tables 2
+    $('#data-table-2').DataTable({
+        searching: false,
+        paging: false,
+        ordering: false,
+        pageLength: 10,
+        // scrollCollapse: true,
+        // scrollY: '200px',
+        language: {
+            info: '총 _TOTAL_ 개의 행 중 _START_ 행 부터 _END_ 행 까지',
+            infoEmpty: '데이터가 없습니다.',
+            emptyTable: '데이터가 없습니다.',
+            thousands: ',',
+            lengthMenu: '총 _MENU_ 행씩 보기',
+            loadingRecords: '로딩 중',
+            processing: '동작 중',
+            zeroRecords: '검색 결과 없음',
+            paginate: {
+                first: '처음',
+                last: '마지막',
+                next: '다음',
+                previous: '이전'
+            },
+            search: '검색'
+        }
+    });
 });

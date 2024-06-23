@@ -34,7 +34,23 @@ i {
         mask-image: url('../img/icon/svg/arrow-right.svg');
     }
 
+    &.api-add {
+        mask-image: url('../img/icon/svg/api-add.svg');
+    }
+
+    &.excel {
+        mask-image: url('../img/icon/svg/excel.svg');
+    }
+
     &.chevron-arrow-right {
         mask-image: url('../img/icon/svg/chevron-arrow-right.svg');
+    }
+
+    &.del {
+        background-image: url('../img/icon/svg/delete.svg');
+    }
+
+    &.doc {
+        background-image: url('../img/icon/svg/document.svg');
     }
 }

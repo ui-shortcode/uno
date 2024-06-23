@@ -1,0 +1,72 @@
+@use "./config" as *;
+
+.table-container {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid var(--color-gray-500);
+}
+
+.table-row {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+}
+
+.heading {
+    background-color: var(--color-gray-300);
+    @include font(13);
+    font-weight: 600;
+    height: 30px;
+
+    .row-item{
+        &.btn-cell,
+        &:last-child {
+            padding-right: 17px;
+            padding-left: 0;
+        }
+    }
+}
+
+.row-item {
+    display: flex;
+    flex: 1;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+
+    .field {
+        padding-left: 8px;
+        padding-right: 8px;
+
+        input[type='text'] {
+            height: 25px;
+        }
+    }
+}
+
+.table-row:last-child {
+    border-bottom: 0;
+}
+
+.table-body {
+    overflow-y: scroll;
+    height: 190px;
+
+    &.type-long {
+        height: 400px;
+    }
+}
+
+.table-row-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    background-color: var(--color-gray-600);
+    color: var(--color-white);
+    @include font(14);
+    font-weight: 500;
+}

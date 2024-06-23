@@ -1,13 +1,8 @@
 <%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
 
-<style>
-    .gap { margin: 20px 0;}
-</style>
-
-<div class="example-wrapper popup-guide">
-
-    <!-- popup -->
-    <div class="popup-wrapper popup-type-content">
+<!-- popup -->
+<div class="popup-wrapper">
+    <div class="popup-container popup-type-content">
         <div class="popup-header">
             팝업 타이틀
         </div>
@@ -34,26 +29,17 @@
             </div>
         </div>
         <div class="popup-footer">
-            <%- include('../components/button/_button.html', {
-                buttonSize: 'btn-lg',
-                buttonColor: 'btn-secondary',
-                buttonText: '취소'
-            }) %>
-            <%- include('../components/button/_button.html', {
-                buttonSize: 'btn-lg',
-                buttonText: '확인'
-            }) %>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-secondary btn-lg"><span>취소</span></button>
+                <button type="button" class="btn btn-primary btn-lg"><span>확인</span></button>
+            </div>
         </div>
 
         <div class="popup-close">
             <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
         </div>
     </div>
-    <!-- // popup -->
-
 </div>
-
-<!-- popup-mask -->
-<div id="popup-mask"></div>
+<!-- // popup -->
 
 <%- include("../components/10_foot/_foot.html") %>

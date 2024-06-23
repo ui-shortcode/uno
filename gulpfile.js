@@ -127,7 +127,7 @@ function watch_files() {
     gulp.watch("src/assets/fonts/**/*.woff", copyFonts);
     gulp.watch("src/assets/scss/**/*.scss", css);
     gulp.watch("src/components/**/*.scss", css);
-    gulp.watch("src/assets/js/*.js", js).on("change", browserSync.reload);
+    gulp.watch("src/assets/js/**/*.js", js).on("change", browserSync.reload);
     gulp.watch("src/pages/*.html", ejsTask).on("change", browserSync.reload);
     gulp.watch("src/components/**/*.html", ejsTask).on("change", browserSync.reload);
 }

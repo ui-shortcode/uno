@@ -5,7 +5,6 @@
 @use "./layout";
 @use "./forms";
 @use "./popup";
-@use "./table";
 
 // components (윈도우 때문에 일일이 추가해줘야함 ㅠㅠ)
 @use "../../components/header/header";
@@ -14,3 +13,7 @@
 @use "../../components/button/button";
 @use "../../components/badge/badge";
 @use "../../components/toast/toast";
+
+@use "./scroll-box"; // scroll box
+@use "./flex_table"; // fixed table
+@use "./custom"; // custom

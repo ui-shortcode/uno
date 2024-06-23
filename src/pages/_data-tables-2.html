@@ -1,0 +1,202 @@
+ <%- include("../components/00_head/_head.html", { document_title: 'List' }) %>
+    <style>
+        body { background-color: #ddd;}
+        .guide { background-color: #fff; margin: 0 10px; min-height: 100%; }
+    </style>
+
+    <div class="guide">
+
+        <div class="list-search-wrapper">
+            <div class="list-search-items">
+                <div class="field">
+                    <select>
+                        <option>기관 전체</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select>
+                        <option>공개여부</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select>
+                        <option>In/OUT</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select>
+                        <option>서비스 상태</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <input type="text" class="txt date" value="2024.05.05" readonly>
+                </div>
+                <div class="field">
+                    <input type="text" class="txt period-date" value="2024.05.05 ~ 2024.05.31" readonly>
+                </div>
+                <div class="field">
+                    <input type="text" class="txt month" value="2024.05" readonly>
+                </div>
+                <div class="field">
+                    <input type="text" class="txt" placeholder="API명 / 접속URL 입력">
+                </div>
+                <div class="field">
+                    <input type="text" class="txt" placeholder="API명 / 접속URL 입력">
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-secondary btn-outlined"><span>검색</span></button>
+            </div>
+        </div>
+
+        <div class="list-util-wrapper">
+            <div class="list-info">
+                <p>총 <strong>400</strong>건의 API 서비스가 존재합니다.</p>
+            </div>
+            <div class="list-util">
+                <div class="file-upload-search-container">
+                    <div class="field with-del">
+                        <input type="text" class="txt" placeholder="파일명 입력">
+                        <button type="button" class="btn-del"><i class="del"></i><span class="sr-hide">파일선택</span></button>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-secondary"><i class="upload"></i><span>파일선택</span></button>
+                        <button type="button" class="btn btn-secondary btn-outlined"><span>등록반영</span></button>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-secondary"><span>확인</span></button>
+                    <button type="button" class="btn btn-primary"><i class="api-add"></i><span>API 등록</span></button>
+                    <button type="button" class="btn btn-success"><i class="excel"></i><span>엑셀 등록</span></button>
+                    <button type="button" class="btn btn-success"><i class="download"></i><span>선택 다운로드</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="datatables-wrapper">
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>선택</th>
+                        <th>등록기관</th>
+                        <th>API명</th>
+                        <th>접속URL</th>
+                        <th>공개여부</th>
+                        <th>In/Out</th>
+                        <th>상태</th>
+                        <th>업개수</th>
+                        <th>버전</th>
+                        <th>등록자</th>
+                        <th>규격맴핑</th>
+                        <th>상세/승인요청</th>
+                        <th>수정</th>
+                        <th>삭제/<br>강제삭제</th>
+                        <th>중지/<br>활성화</th>
+                        <th>복구/<br>재처리</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 1; i < 51; i++) { %>
+                    <tr>
+                        <td><%= i %></td>
+                        <td>
+                            <div class="checkbox-container">
+                                <div class="field">
+                                    <input type="checkbox" class="checkbox" id="checkbox-1-1" name="checkbox-1-1" <% if(i % 2 == 0) { %>checked<% } %>>
+                                </div>
+                            </div>
+                        </td>
+                        <td>등록기관</td>
+                        <td>1원송금</td>
+                        <td>/api/api_url/api_url</td>
+                        <td class="align-center">
+                            <% if(i % 2 == 0) { %>
+                            <span class="badge badge-info">공개</span>
+                            <% } else { %>
+                            <span class="badge badge-danger">미공개</span>
+                            <% } %>
+                        </td>
+                        <td class="align-center">
+                            <% if(i % 2 == 0) { %>
+                            <span class="badge badge-primary">Outbound</span>
+                            <% } else { %>
+                            <span class="badge badge-focus">Inbound</span>
+                            <% } %>
+                        </td>
+                        <td class="align-center">
+                            <% if(i % 4 == 0) { %>
+                            <span class="badge badge-focus">승인중</span>
+                            <% } else if(i % 4 == 1) { %>
+                            <span class="badge badge-info">준비중</span>
+                            <% } else if(i % 4 == 2) { %>
+                            <span class="badge badge-warning">일시중지</span>
+                            <% } else if(i % 4 == 3) { %>
+                            <span class="badge badge-danger">삭제오류</span>
+                            <% } %>
+                        </td>
+                        <td class="align-center">1</td>
+                        <td class="align-center"><span class="badge badge-secondary">v2.1.1</span></td>
+                        <td class="align-center">운영자</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center bg-sky">
+                            <button class="btn btn-sm btn-secondary btn-outlined"><span>상세</span></button>
+                            <button class="btn btn-sm btn-secondary"><span>승인요청</span></button>
+                        </td>
+                        <td class="align-center"><button class="btn btn-sm btn-secondary btn-outlined"><span>수정</span></button></td>
+                        <td class="align-center bg-sky">
+                            <button class="btn btn-sm btn-secondary"><span>삭제</span></button>
+                            <button class="btn btn-sm btn-secondary btn-outlined"><span>강제삭제</span></button>
+                        </td>
+                        <td class="align-center">
+                            <% if(i % 2 == 0) { %>
+                            <button class="btn btn-sm btn-secondary btn-outlined"><span>중지</span></button>
+                            <% } else { %>
+                            <button class="btn btn-sm btn-secondary"><span>활성화</span></button>
+                            <% } %>
+                        </td>
+                        <td class="align-center bg-sky">
+                            <% if(i % 2 == 0) { %>
+                            <button class="btn btn-sm btn-secondary btn-outlined"><span>복구</span></button>
+                            <% } else { %>
+                            <button class="btn btn-sm btn-secondary"><span>재처리</span></button>
+                            <% } %>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#example').DataTable({
+                searching: false,
+                // paging: false,
+                ordering: false,
+                pageLength: 10,
+                // scrollCollapse: true,
+                // scrollY: '200px',
+                language: {
+                    info: '총 _TOTAL_ 개의 행 중 _START_ 행 부터 _END_ 행 까지',
+                    infoEmpty: '데이터가 없습니다.',
+                    emptyTable: '데이터가 없습니다.',
+                    thousands: ',',
+                    lengthMenu: '총 _MENU_ 행씩 보기',
+                    loadingRecords: '로딩 중',
+                    processing: '동작 중',
+                    zeroRecords: '검색 결과 없음',
+                    paginate: {
+                        first: '처음',
+                        last: '마지막',
+                        next: '다음',
+                        previous: '이전'
+                    },
+                    search: '검색'
+                }
+            });
+        });
+    </script>
+
+<%- include("../components/10_foot/_foot.html") %>
