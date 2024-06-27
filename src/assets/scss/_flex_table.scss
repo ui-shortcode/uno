@@ -70,3 +70,76 @@
     @include font(14);
     font-weight: 500;
 }
+
+//
+
+.data-table-wrapper {
+    &.with-bg {
+        padding: 12px;
+        background-color: rgba(236, 243, 255, 0.7);
+    }
+
+    .data-table-container {
+        .data-table-header {
+            display: flex;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            background-color: var(--color-gray-600);
+        }
+
+        .data-table-box {
+            border: 1px solid var(--color-gray-500);
+            background-color: var(--color-gray-300);
+
+             table {
+                width: 100% !important;
+                table-layout: fixed;
+
+                thead {
+                    tr {
+                        th {
+                            color: var(--color-gray-700);
+                            background-color: var(--color-gray-300);
+                            border-bottom: 1px solid var(--color-gray-500);
+                            font-size: 13px;
+                            font-weight: 500;
+                            padding: 5px;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    &.hidden {
+                        display: none;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            padding: 7px 8px;
+                            vertical-align: middle;
+                            @include truncate();
+                            border-bottom: 1px solid var(--color-gray-300);
+                            background-color: var(--color-white);
+
+                            &.align-center{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+             }
+        }
+    }
+
+    &.table-half {
+        display: flex;
+        justify-content: space-between;
+
+        .data-table-container {
+            width: calc(50% - 10px);
+        }
+    }
+}

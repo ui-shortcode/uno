@@ -1,0 +1,82 @@
+<%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
+
+<!-- popup -->
+<div class="popup-wrapper">
+    <div class="popup-container popup-type-content">
+        <div class="popup-header">
+            결재선 관리
+        </div>
+        <div class="popup-body">
+            <div class="popup-content">
+                <!-- 승인자 정보 / 승인라인 -->
+                <div class="data-table-wrapper table-half">
+                    <div class="data-table-container">
+                        <div class="data-table-header">
+                            <p>승인자 정보</p>
+                        </div>
+                        <div class="data-table-box">
+                            <table class="data-table-scroll" data-height="400">
+                                <thead>
+                                    <tr>
+                                        <th>데이터</th>
+                                        <th>닉네임</th>
+                                        <th>선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(var i = 0; i < 20; i++) { %>
+                                    <tr>
+                                        <td class="align-center">p1mnager</td>
+                                        <td class="align-center">1제공매니저</td>
+                                        <td class="align-center"><button type="button" class="btn btn-secondary btn-sm btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button></td>
+                                    </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="data-table-container">
+                        <div class="data-table-header">
+                            <p>승인라인</p>
+                        </div>
+                        <div class="data-table-box">
+                            <table class="data-table-scroll" data-height="400">
+                                <thead>
+                                    <tr>
+                                        <th>데이터</th>
+                                        <th>닉네임</th>
+                                        <th>선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(var i = 0; i < 20; i++) { %>
+                                    <tr>
+                                        <td class="align-center">p1mnager</td>
+                                        <td class="align-center">1제공매니저</td>
+                                        <td class="align-center"><button type="button" class="btn btn-danger btn-sm"><span>선택취소</span></button></td>
+                                    </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 승인자 정보 / 승인라인 -->
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-secondary btn-lg"><span>승인취소</span></button>
+                <button type="button" class="btn btn-primary btn-lg"><span>승인요청</span></button>
+            </div>
+        </div>
+
+        <div class="popup-close">
+            <button type="button" class="btn-popup-close"><span class="sr-hide">닫기</span></button>
+        </div>
+    </div>
+</div>
+<!-- // popup -->
+
+<%- include("../components/10_foot/_foot.html") %>

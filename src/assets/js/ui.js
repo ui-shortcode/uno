@@ -102,4 +102,16 @@ $(function(){
             search: '검색'
         }
     });
+
+    // data table scroll
+    $(".data-table-scroll").each(function(i, o){
+        var $this = $(o);
+        $this.DataTable({
+            searching: false,
+            paging: false,
+            ordering: false,
+            scrollCollapse: true,
+            scrollY: $this.data('height')
+        })
+    });
 });

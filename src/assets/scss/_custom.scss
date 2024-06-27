@@ -91,3 +91,11 @@ div.dt-container .toggle-container {
         justify-content: center;
     }
 }
+
+div.dt-container div.dt-layout-cell {
+    padding: 0;
+}
+
+div.dt-container.dt-empty-footer .dt-scroll-body {
+    border-bottom: none;
+}
