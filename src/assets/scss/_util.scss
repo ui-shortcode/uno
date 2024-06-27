@@ -220,4 +220,8 @@ td.bg-sky {
             margin-left: 4px;
         }
     }
+
+    & + .datatables-wrapper {
+        margin-top: 15px;
+    }
 }
