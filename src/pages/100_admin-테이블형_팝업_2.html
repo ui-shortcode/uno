@@ -1,10 +1,10 @@
-<%- include("../components/00_head/_head.html", { document_title: '콘텐츠 팝업' }) %>
+<%- include("../components/00_head/_head.html", { document_title: '팝업 테이블 공통 예시' }) %>
 
 <!-- popup -->
 <div class="popup-wrapper">
     <div class="popup-container popup-type-content">
         <div class="popup-header">
-            결재선 관리
+            팝업 테이블 공통 예시
         </div>
         <div class="popup-body">
             <div class="popup-content">
@@ -12,7 +12,7 @@
                 <div class="data-table-wrapper">
                     <div class="data-table-container">
                         <div class="data-table-box">
-                            <table class="data-table-scroll" data-height="400">
+                            <table class="data-table-scroll" data-height="400" data-width="45, 170, auto, 102, 100">
                                 <thead>
                                     <tr>
                                         <th>선택</th>
@@ -28,13 +28,29 @@
                                         <td class="align-center">
                                             <div class="checkbox-container">
                                                 <div class="field">
-                                                    <input type="checkbox" class="checkbox" id="checkbox-1-1" name="checkbox-1-1" checked>
+                                                    <% if(i % 2 == 0) { %>
+                                                    <input type="checkbox" class="checkbox" id="checkbox-1-<%= i %>" name="checkbox-1-1" checked>
+                                                    <% } else { %>
+                                                    <input type="checkbox" class="checkbox" id="checkbox-1-<%= i %>" name="checkbox-1-1">
+                                                    <% } %>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="align-center"><%= i %>제공기관 승인선</td>
-                                        <td class="align-center">운영자 -> 제1제공기관 매니저</td>
-                                        <td class="align-center"><span class="badge badge-focus badge-sm">공개</span></td>
+                                        <td class="align-center">
+                                            <% if(i % 2 == 0) { %>
+                                            운영자 -> 제1제공기관 매니저
+                                            <% } else { %>
+                                            제1제공기관 매니저 -> 제2제공기관매니저 -> 운영자
+                                            <% } %>
+                                        </td>
+                                        <td class="align-center">
+                                            <% if(i % 2 == 0) { %>
+                                            <span class="badge badge-info badge-sm">공개</span>
+                                            <% } else { %>
+                                            <span class="badge badge-danger badge-sm">비공개</span>
+                                            <% } %>
+                                        </td>
                                         <td class="align-center"><button type="button" class="btn btn-secondary btn-sm btn-icon-right"><i class="chevron-arrow-right"></i><span>선택</span></button></td>
                                     </tr>
                                     <% } %>

@@ -106,12 +106,31 @@ $(function(){
     // data table scroll
     $(".data-table-scroll").each(function(i, o){
         var $this = $(o);
-        $this.DataTable({
-            searching: false,
-            paging: false,
-            ordering: false,
-            scrollCollapse: true,
-            scrollY: $this.data('height')
-        })
+        var columsWidth = $(o).data('width') || '';
+        var scrollYHeight = $(o).data('height') || '';
+        console.log(columsWidth);
+
+        var columsWidthArr = [];
+        if(columsWidth != '') {
+            var columsWidthSplit = columsWidth.split(',');
+            for (var i = 0; i < columsWidthSplit.length; i++) {
+                columsWidthArr.push({ width: columsWidthSplit[i].trim() + 'px' });
+            }
+        }
+
+        console.log(columsWidthArr);
+
+        var dataTableOpt = {};
+        dataTableOpt.searching = false;
+        dataTableOpt.paging = false;
+        dataTableOpt.ordering = false;
+        dataTableOpt.scrollCollapse = true;
+
+        if(scrollYHeight != '') dataTableOpt.scrollY = scrollYHeight;
+        if(columsWidthArr != '') dataTableOpt.columns = columsWidthArr;
+        
+        console.log(dataTableOpt);
+
+        $this.DataTable(dataTableOpt)
     });
 });

@@ -17,8 +17,7 @@
 
 .heading {
     background-color: var(--color-gray-300);
-    @include font(13);
-    font-weight: 600;
+    @include font(13, 600);
     height: 30px;
 
     .row-item{
@@ -67,8 +66,7 @@
     height: 30px;
     background-color: var(--color-gray-600);
     color: var(--color-white);
-    @include font(14);
-    font-weight: 500;
+    @include font(14, 500);
 }
 
 //
@@ -125,6 +123,18 @@
                             background-color: var(--color-white);
 
                             &.align-center{
+                                text-align: center;
+                            }
+
+                            input[type='text'],
+                            select {
+                                width: 100%;
+                                max-width: 100%;
+                                min-width: 100%;
+                                @include font(12,400);
+                            }
+
+                            input[type='text'] {
                                 text-align: center;
                             }
                         }

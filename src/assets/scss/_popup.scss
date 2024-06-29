@@ -119,6 +119,12 @@
 
     .popup-size-lg & {
         width: 1220px;
+
+        .field-wrapper .field-container .field-box .label-cell{
+            width: 160px;
+            min-width: 160px;
+            max-width: 160px;
+        }
     }
 
     .popup-size-sm & {

@@ -425,9 +425,13 @@ $font-weight-primary: 400;
 
 // accessibility → hide
 @mixin srHide {
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(0 0 0 0);
     clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 // accessibility → show
@@ -469,9 +473,9 @@ $font-weight-primary: 400;
 }
 
 // font
-@mixin font($size) {
+@mixin font($size, $weight : var(--text-#{$size}-font-weight)) {
     font-size: var(--text-#{$size}-font-size);
-    font-weight: var(--text-#{$size}-font-weight);
+    font-weight: $weight;
     line-height: var(--text-#{$size}-line-height);
 }
 

@@ -3,35 +3,59 @@
 <style>
     .index-list { width: 700px; background-color: #fff; margin: 0 auto; height: 100%; }
     .index-list ul { list-style: disc; margin-left: 50px;}
-    .index-list ul li a:hover{ text-decoration: underline; }
+    .index-list ol { list-style: decimal; margin-left: 50px;}
+    .index-list li a:hover{ text-decoration: underline; }
+    .index-list h2 { font-weight: 800; padding: 20px 10px; } 
     .index-list h4 { font-weight: 800; padding: 20px 10px; } 
 </style>
 
 <div class="index-list">
-    <h4>페이지 리스트</h4>
+    <h2>페이지 리스트</h2>
+
+    <h4>GUIDE</h4>
+    <ol>
+        <li><a href="./000_common-form.html">폼 요소 가이드</a></li>
+        <li><a href="./000_common-loading.html">로딩</a></li>
+        <li><a href="./100_admin-popup-content.html">Admin 콘텐츠 팝업 가이드</a></li>
+    </ol>
+
+    <h4>User</h4>
     <ul>
-        <li><a href="./_form.html">폼 요소 가이드</a></li>
-        <li><a href="./_popup-content.html">콘텐츠 팝업 가이드</a></li>
+        <li>-</li>
     </ul>
 
-    <h4>Admin Web</h4>
-    <ul>
-        <li><a href="./template_login.html">admin web 레이아웃 - 로그인 전</a></li>
-        <li><a href="./template_logined.html">admin web 레이아웃 - 로그인 후</a></li>
-        <li><a href="./list_page_template_1.html">list page template 1</a></li>
-        <li><a href="./list_page_template_2.html">list page template 2</a></li>
-        <li><a href="./레이아웃2_샘플_1200px.html">레이아웃2_샘플_1200px</a></li>
-        <li><a href="./레이아웃3_샘플_620px.html">레이아웃3_샘플_620px</a></li>
-        <li><a href="./팝업_공통_포맷.html">팝업_공통_포맷</a></li>
-        <li><a href="./팝업_레이아웃_샘플1.html">팝업_레이아웃_샘플1</a></li>
-        <li><a href="./popup-alert-1.html">알림 팝업 예시 1</a></li>
-        <li><a href="./popup-alert-2.html">알림 팝업 예시 2</a></li>
-        <li><a href="./popup-alert-3.html">알림 팝업 예시 3</a></li>
-        <li><a href="./popup-alert-4.html">알림 팝업 예시 4</a></li>
-        <li><a href="./popup-alert-5.html">알림 팝업 예시 5</a></li>
-        <li><a href="./toast-1.html">Toast 1</a></li>
-        <li><a href="./toast-2.html">Toast 2</a></li>
-    </ul>
+    <h4>Admin</h4>
+    <ol>
+        <li><a href="./010_admin-template_login.html">admin web 레이아웃 - 로그인 전</a></li>
+        <li><a href="./010_admin-template_logined.html">admin web 레이아웃 - 로그인 후</a></li>
+        <li><a href="./100_admin-list_page_template_1.html">list page template 1</a></li>
+        <li><a href="./100_admin-list_page_template_2.html">list page template 2</a></li>
+        <li><a href="./100_admin-popup-alert-1.html">알림 팝업 예시 1</a></li>
+        <li><a href="./100_admin-popup-alert-2.html">알림 팝업 예시 2</a></li>
+        <li><a href="./100_admin-popup-alert-3.html">알림 팝업 예시 3</a></li>
+        <li><a href="./100_admin-popup-alert-4.html">알림 팝업 예시 4</a></li>
+        <li><a href="./100_admin-popup-alert-5.html">알림 팝업 예시 5</a></li>
+        <li><a href="./100_admin-toast-1.html">Toast 1</a></li>
+        <li><a href="./100_admin-toast-2.html">Toast 2</a></li>
+        
+        <li><a href="./100_admin-레이아웃2_샘플_1200px.html">레이아웃2_샘플_1200px</a></li>
+        <li><a href="./100_admin-레이아웃2_응용버전.html">레이아웃2_응용버전</a></li>
+        <li><a href="./100_admin-레이아웃3_샘플_620px.html">레이아웃3_샘플_620px</a></li>
+        <li><a href="./100_admin-이용약관_view.html">이용약관 view</a></li>
+        <li><a href="./100_admin-이용약관_write.html">이용약관 write</a></li>
+        <li><a href="./100_admin-테이블형_팝업_1_승인라인.html">테이블형_팝업_1_승인라인</a></li>
+        <li><a href="./100_admin-테이블형_팝업_2.html">테이블형_팝업_2</a></li>
+        <li><a href="./100_admin-팝업_공통_포맷.html">팝업_공통_포맷</a></li>
+        <li><a href="./100_admin-팝업_레이아웃_샘플1.html">팝업_레이아웃_샘플1</a></li>
+    </ol>
+
+    
+
+    <h4>Sample</h4>
+    <ol>
+        <li><a href="./100_admin-data-tables-1.html">DataTables Sample 1</a></li>
+        <li><a href="./100_admin-data-tables-2.html">DataTables Sample 2</a></li>
+    </ol>
 </div>
 
 <%- include("../components/10_foot/_foot.html") %> 
