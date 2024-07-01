@@ -53,4 +53,10 @@ i {
     &.doc {
         background-image: url('../img/icon/svg/document.svg');
     }
+
+    &.arrow-down-white {
+        width: 18px !important;
+        height: 18px !important;
+        mask-image: url('../img/icon/svg/arrow-down-white.svg');
+    }
 }

@@ -15,6 +15,11 @@ const del = require('del');
 const plumber = require('gulp-plumber');
 const prettify = require('gulp-prettify');
 
+const gifsicle = require('imagemin-gifsicle');
+const jpegtran = require('imagemin-jpegtran');
+const optipng = require('imagemin-optipng');
+const svgo = require('imagemin-svgo');
+
 // /*
 // TOP LEVEL FUNCTIONS
 //     gulp.task = Define tasks
@@ -27,7 +32,23 @@ const prettify = require('gulp-prettify');
 function imageMin(cb) {
     gulp.src("src/assets/img/**/*")
         .pipe(plumber())
-        .pipe(imagemin())
+        .pipe(imagemin([
+            gifsicle({interlaced: true}),
+            jpegtran({quality: 75, progressive: true}),
+            optipng({optimizationLevel: 5}),
+            svgo({
+                plugins: [
+                    {
+                        name: 'removeViewBox',
+                        active: true
+                    },
+                    {
+                        name: 'cleanupIDs',
+                        active: false
+                    }
+                ]
+            })
+        ]))
         .pipe(gulp.dest("dist/assets/img"));
     cb();
 }

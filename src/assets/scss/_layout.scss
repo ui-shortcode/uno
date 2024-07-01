@@ -5,6 +5,7 @@
     flex-direction: column;
     min-height: 100%;
     height: 100%;
+    min-width: 1290px;
 
     main {
         padding-top: var(--header-height);
@@ -13,7 +14,32 @@
 
         #content {
             flex-grow: 1;
-            padding: 8px 30px 30px;
+            padding: calc(var(--header-height) + 10px) 30px 30px;
+        }
+    }
+
+    @at-root body.user & {
+        main {
+            display: block;
+
+            .main-visual {
+                position: relative;
+                height: 680px;
+                background: url('../img/header/user-main-visual.jpg') top center no-repeat;
+            }
+
+            #content {
+                padding: 0; 
+
+                .content-wrapper {
+                    .content-container {
+                        display: block;
+                        margin: 0 auto;
+                        padding: 80px 0;
+                        max-width: 1280px;
+                    }
+                }
+            }
         }
     }
 }
@@ -26,8 +52,10 @@
 
             .page-title {
                 display: flex;
-                height: 49px;
-                align-items: center;
+                height: 48px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                align-items: flex-end;
 
                 h1 {
                     display: inline-flex;

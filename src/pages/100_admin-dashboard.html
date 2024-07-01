@@ -1,0 +1,203 @@
+<%- include("../components/00_head/_head.html", { document_title: 'list page template 1', darkMode: true }) %>
+
+    <div class="container">
+        <%- include("../components/header/_header.html", { logined: true }) %>
+
+        <main id="content-wrap">
+            <%- include("../components/sidenav/_sidenav.html") %>
+
+            <div id="content">
+                <!-- .page-header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>대시보드</h1>
+                        <span>API 서비스 거래량 등을 확인해 보세요.</span>
+                    </div>
+
+                    <div class="page-breadcrumb">
+                        <span>Admin</span>
+                        <span class="gap">/</span>
+                        <span class="current">대시보드</span>
+                    </div>
+                </div>
+                <!-- // .page-header -->
+
+                <div class="dashboard-wrapper">
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items dashboard-item-summary">
+                        <div class="dashboard-body">
+                            <div class="title-img">
+                                <img src="../assets/img/dashboard/api-request.svg" alt="API 거래현황">
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num primary">1,000</p>
+                                    <p class="title">당일 요청건수</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num success">1,000</p>
+                                    <p class="title">당일 처리건수</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num danger">1,000</p>
+                                    <p class="title">당일 오류건수</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items dashboard-item-summary">
+                        <div class="dashboard-body">
+                            <div class="title-img">
+                                <img src="../assets/img/dashboard/api-app-dashboard.svg" alt="API/APP 현황">
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num primary">1,000</p>
+                                    <p class="title">등록 APP</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num success">1,000</p>
+                                    <p class="title">당일 사용 APP</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num primary">1,000</p>
+                                    <p class="title">등록 API</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-item">
+                                <div class="count-box">
+                                    <p class="num success">1,000</p>
+                                    <p class="title">당일 호출 API</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items">
+                        <div class="dashboard-header">
+                            <p class="title">전주·전일·현재 시간대별 API 호출건수</p>
+                            <div class="info">
+                                <span class="dot-primary">금일</span>
+                                <span class="dot-success">전일</span>
+                                <span class="dot-danger">전주</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="chart-wrapper">
+                                chart
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items">
+                        <div class="dashboard-header">
+                            <p class="title">전주·전일·현재 시간대별 API 호출건수</p>
+                            <div class="info">
+                                <span class="dot-primary">금일</span>
+                                <span class="dot-success">전일</span>
+                                <span class="dot-danger">전주</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="chart-wrapper">
+                                chart
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items">
+                        <div class="dashboard-header">
+                            <p class="title">시간대별 API 호출량</p>
+                            <div class="info">
+                                <span class="dot-info">성공</span>
+                                <span class="dot-danger">실패</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="chart-wrapper">
+                                chart
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+                     
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items">
+                        <div class="dashboard-header">
+                            <p class="title">App 호출</p>
+                            <div class="info">
+                                <span class="dot-info">성공</span>
+                                <span class="dot-danger">실패</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="chart-wrapper">
+                                chart
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+                     
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items">
+                        <div class="dashboard-header">
+                            <p class="title">API 호출 TOP 5</p>
+                            <div class="info">
+                                <span>2024-07-07 기준</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="chart-wrapper">
+                                chart
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+                     
+                    <!-- dashboard-items -->
+                    <div class="dashboard-items">
+                        <div class="dashboard-header">
+                            <p class="title">API 오류 호출 TOP 5</p>
+                            <div class="info">
+                                <span>2024-07-07 기준</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="chart-wrapper">
+                                chart
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // dashboard-items -->
+                </div>
+            </div>
+        </main>
+
+        <%- include("../components/footer/_footer.html", {}) %>
+    </div>
+
+<%- include("../components/10_foot/_foot.html", { showcase: true }) %>

@@ -1,0 +1,159 @@
+@use "./config" as *;
+
+body.dark-mode {
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+
+    #content-wrap {
+        #content {
+            .page-header {
+                .page-title h1 + span {
+                    color: var(--color-white);
+                }
+
+                .page-breadcrumb span.current {
+                    color: var(--color-blue-500);
+                }
+            }
+
+            .dashboard-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                .dashboard-items {
+                    width: calc(50% - 15px);
+                    border: 1px solid var(--color-gray-800);
+                    border-radius: 10px;
+                    overflow: hidden;
+
+                    .dashboard-header {
+                        display: flex;
+                        height: 45px;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: rgba(0,0,0, .3);
+                        padding: 0 15px;
+                        
+                        .title {
+                            @include font(15);
+                        }
+
+                        .info {
+                            @include font(12);
+
+                            [class^='dot'] {
+                                position: relative;
+                                padding-left: 12px;
+                                margin-left: 12px;
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translateY(-50%);
+                                    width: 9px;
+                                    height: 9px;
+                                    border-radius: 50%;
+                                }
+                            }
+
+                            .dot-primary::before {
+                                background-color: var(--color-blue-500);
+                            }
+
+                            .dot-success::before {
+                                background-color: var(--color-green-500);
+                            }
+
+                            .dot-danger::before {
+                                background-color: var(--color-red-500);
+                            }
+
+                            .dot-info::before {
+                                background-color: var(--color-teal-500);
+                            }
+
+                            .dot-warning::before {
+                                background-color: var(--color-orange-500);
+                            }
+                        }
+                    }
+
+                    .chart-wrapper {
+                        padding: 12px;
+                    }
+
+                    &.dashboard-item-summary {
+                        .dashboard-body {
+                            padding: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            gap: 10px;
+
+                            .title-img {
+                                min-width: 120px;
+                                max-width: 120px;
+                                width: 120px;
+                                height: 90px;
+                            }
+
+                            .dashboard-item {
+                                width: 25%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                flex-direction: row;
+                                border: 1px solid var(--color-gray-800);
+                                border-radius: 12px;
+                                background-color: rgba(0,0,0, .3);
+                                min-height: 90px;
+
+                                .count-box {
+                                    width: 100%;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                }
+
+                                p.num {
+                                    display: flex;
+                                    height: 42px;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    line-height: 30px;
+                                    padding-top: 2px;
+
+                                    &.primary{
+                                        color: var(--color-blue-400);
+                                    }
+
+                                    &.success{
+                                        color: var(--color-green-500);
+                                    }
+
+                                    &.danger{
+                                        color: var(--color-orange-500);
+                                    }
+                                }
+
+                                p.title {
+                                    display: flex;
+                                    height: 26px;
+                                    align-items: flex-end;
+                                    justify-content: center;
+                                    border-top: 1px solid var(--color-gray-800);
+                                    @include font(14);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

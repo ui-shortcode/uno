@@ -153,3 +153,46 @@
         }
     }
 }
+
+//
+
+.btn.btn-popup {
+    padding-right: 0;
+}
+
+.popup-nav {
+    position: absolute;
+    z-index: 9999;
+    
+    ul {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-500);
+        border-radius: 4px;
+        overflow: hidden;
+        width: 65px;
+        max-width: 65px;
+
+        position: absolute;
+        top: 22px;
+        right: 10px;
+        z-index: 100;
+
+        li {
+            a {
+                display: block;
+                @include font(14);
+                padding: 2px 8px;
+                color: var(--color-gray-800);
+                text-align: left;
+
+                &:hover {
+                    background-color: rgba(236, 243, 255, 0.7);
+                }
+            }
+
+            &.gap {
+                border-bottom: 1px solid var(--color-gray-300);
+            }
+        }
+    }
+}

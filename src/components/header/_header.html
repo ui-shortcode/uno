@@ -1,11 +1,17 @@
+    <% const userTemplate = locals.userTemplate ? locals.userTemplate : false; %>
+
     <!-- #header -->
-    <header id="header">
+    <header id="header" <% if(userTemplate) {%>class="transparent"<%}%>>
         <!-- .container -->
         <div class="container">
             <!-- /logo -->
             <div class="logo">
                 <a href="#">
+                    <% if(userTemplate == false) {%>
                     <img src="../assets/img/header/logo.svg" alt="U&Ours">
+                    <% } else { %>
+                    <img src="../assets/img/header/user-logo.svg" alt="U&Ours">
+                    <% } %>
                 </a>
             </div>
             <!-- // .logo -->
@@ -43,6 +49,24 @@
                             <li><a href="#">Q&A</a></li>
                         </ul>
                     </li>
+                    <% if(userTemplate == true) { %>
+                    <li>
+                        <a href="#">API 등록관리</a>
+                        <ul>
+                            <li><a href="#">승인 관리</a></li>
+                            <li><a href="#">API 관리</a></li>
+                            <li><a href="#">앱 관리</a></li>
+                            <li><a href="#">과금 관리</a></li>
+                            <li><a href="#">사용자 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">시스템 관리</a></li>
+                            <li><a href="#">통계</a></li>
+                            <li><a href="#">콘텐츠 관리</a></li>
+                            <li><a href="#">Portal 연동</a></li>
+                            <li><a href="#">대시보드</a></li>
+                        </ul>
+                    </li>
+                    <% } %>
                 </ul>
             </nav>
             <!-- // .header-nav -->
@@ -69,11 +93,15 @@
                         buttonText: '회원가입',
                         buttonRound: true
                     }) %>
-                    <%- include('../button/_button.html', {
-                        buttonText: '로그인',
-                        buttonOutlined: true,
-                        buttonRound: true
-                    }) %>
+                    <% if(userTemplate == true) { %>
+                        <button type="button" class="btn btn-secondary btn-outlined btn-round"><span>로그인</span></button>
+                    <% } else { %>
+                        <%- include('../button/_button.html', {
+                            buttonText: '로그인',
+                            buttonOutlined: true,
+                            buttonRound: true
+                        }) %>
+                    <% } %>
                 </div>
                 <!-- // .header-util -->
             <% } %>

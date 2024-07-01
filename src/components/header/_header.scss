@@ -22,6 +22,8 @@ header#header {
             height: 100%;
             & > ul {
                 height: inherit;
+                white-space: nowrap;
+
                 & > li {
                     position: relative;
                     display: inline-flex;
@@ -120,5 +122,50 @@ header#header {
                 }
             }
         }
+    }
+
+    &.transparent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background: transparent;
+
+        .container {
+            border-bottom: 1px solid rgba(255, 255, 255, .25);
+
+            .logo {
+                img {
+                    width: 81px;
+                    max-width: 81px;
+                    height: auto;
+                }
+            }
+
+            .header-nav {
+                & > ul {
+                    & > li {
+                        & > a {
+                            color: var(--color-gray-400);
+                        }
+                    }
+                }
+            }
+
+            .header-util {
+                white-space: nowrap;
+                .btn.btn-secondary.btn-outlined.btn-round {
+                    border-width: 2px;
+                    background-color: transparent;
+                    span {
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+
+    & + #content-wrap {
+        padding-top: 0;
     }
 }

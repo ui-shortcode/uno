@@ -1,0 +1,33 @@
+<%- include("../components/00_head/_head.html", { document_title: 'User Template', userTemplate: true }) %>
+
+    <div class="container">
+        <%- include("../components/header/_header.html", { logined: false, userTemplate: true }) %>
+
+        <main id="content-wrap">
+            <div class="main-visual"></div>
+
+            <div id="content">
+
+                <!-- content-wrapper -->
+                <div class="content-wrapper">
+                    <div class="content-container">
+                        content container
+                    </div>
+                </div>
+                <!-- // content-wrapper -->
+
+                <!-- content-wrapper -->
+                <div class="content-wrapper">
+                    <div class="content-container">
+                        content container
+                    </div>
+                </div>
+                <!-- // content-wrapper -->
+                
+            </div>
+        </main>
+        
+        <%- include("../components/footer/_footer.html", {}) %>
+    </div>
+    
+<%- include("../components/10_foot/_foot.html", { showcase: true }) %>
